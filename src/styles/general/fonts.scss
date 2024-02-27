@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Playfair_Display';
+    src: url('src/fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff2') format('woff2'), url('src/fonts/PlayfairDisplay/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Nunito_Regular';
+    src: url('src/fonts/Nunito/Nunito-Regular.woff') format('woff'), url('src/fonts/Nunito/Nunito-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Nunito_SemiBold';
+    src: url('src/fonts/Nunito/Nunito-SemiBold.woff') format('woff'), url('src/fonts/Nunito/Nunito-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Nunito_Medium';
+    src: url('src/fonts/Nunito/Nunito-Medium.woff') format('woff'), url('src/fonts/Nunito/Nunito-Medium.woff2') format('woff2');
+    font-size: 500;
+}

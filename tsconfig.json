@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "npm/*": [ "node_modules/*" ],
+      "@/*": [ "src/*" ],
+      "fonts/*": ["src/assets/fonts/*"],
+      "media/*": ["src/assets/media/*"],
+      "global/*": ["src/global/*"],
+      "components/*": ["src/global/components/*"],
+      "features/*": ["src/global/features/*"],
+      "layout/*": ["src/global/layout/*"],
+      "ui/*": ["src/global/ui/*"],
+      "pages/*": ["src/pages/*"],
+      "scripts/*": ["src/scripts/*"],
+      "styles/*": ["src/styles/*"],
+    }
+  },
+  "include": ["src"]
+}

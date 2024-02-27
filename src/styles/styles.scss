@@ -1,0 +1,15 @@
+@use 'general/_normalize.css';
+@use 'general/reset';
+@use 'general/variables';
+@use 'general/fonts';
+@use 'general/global';
+
+// Popup
+@use 'features/popup/index';
+
+// Ui
+@use 'ui/buttons/close-btn';
+
+// Page
+@use 'layout/general/header';
+@use 'layout/general/footer';

@@ -1,0 +1,36 @@
+@use './fonts' as *;
+
+:root {
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+$primary: #413127;
+$brown: #602314;
+$beige: #EFDFC7;
+$gold: #DD7F34;
+$black_100: #3A3D3E;
+$white: #FFFFFF;
+$grey: #F9F9F9;
+$black_80: #3A3D3ECC;
+$black_60: #3A3D3E99;
+$black_40: #3A3D3E66;
+$black_20: #3A3D3E33;
+$black_10: #3A3D3E1A;
+
+$playfair: 'Playfair_Display';
+$nunito_reg: 'Nunito_Regular';
+$nunito_SB: 'Nunito_SemiBold';
+$nunito_M: 'Nunito_Medium';
+
+$title_h1: 66px;
+$title_h2: 52px;
+$content_title_h3: 42px;
+$content_title_h4: 32px;
+$mob_title: 36px;
+$text24: 24px;
+$text20: 20px;
+$text18: 18px;
+$text16: 16px;
+
+$line_150: 150%;
+$line_140: 140%;
