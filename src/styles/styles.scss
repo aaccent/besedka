@@ -9,7 +9,12 @@
 
 // Ui
 @use 'ui/buttons/close-btn';
+@use 'ui/buttons/btn';
+
 
 // Page
 @use 'layout/general/header';
 @use 'layout/general/footer';
+
+// Components
+@use 'global/components/pageBlocks/bannerBlock/bannerBlock';

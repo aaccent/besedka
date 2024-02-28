@@ -1,0 +1,124 @@
+@use '/src/styles/general/variables.scss' as *;
+
+.btn {
+    border: 1px solid var(--black_100);
+    border-radius: 40px;
+    padding: 14px 20px;
+    font: 400 1.6rem $nunito_400;
+    display: flex;
+    align-items: center;
+
+    &.header-call::before {
+        content: '';
+        background-image: url('/src/assets/media/static/call.svg');
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+    }
+
+    &.header-menu {
+        border-radius: 30px;
+        padding: 12px 16px;
+        border-color: var(--black_20);
+
+        &:hover {
+            border-color: var(--black_100);
+        }
+
+        &.submenu::after {
+            content: '';
+            background-image: url('/src/assets/media/static/arrow_down.svg');
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 5px;
+        }
+    }
+
+    &.view-all {
+        border-color: var(--gold);
+        text-transform: uppercase;
+        padding: 20px 40px;
+        border-radius: 100px;
+
+        &:hover {
+            border-color: #DD7F3426;
+            background-color: #DD7F3426;
+        }
+
+        &:active {
+            background-color: var(--gold);
+            color: var(--white);
+        }
+    }
+
+    &.badge {
+        border: none;
+        background-color: var(--white25);
+        color: var(--white);
+        padding: 8px 16px;
+    }
+
+    &.footer-call {
+        border-color: var(--white59);
+        background-color: #FFFFFF26;
+        color: var(--white);
+    }
+
+    &.submit {
+        border: none;
+        padding: 20px 40px;
+        background-color: var(--gold);
+        color: var(--white);
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 40px;
+        }
+
+        &:hover::after {
+            background-color: var(--white20);
+        }
+
+        &:active::after {
+            background-color: #00000033;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &.header-menu {
+            justify-content: space-between;
+        }
+
+        &.view-all {
+            width: fit-content;
+            font-size: 16px;
+        }
+
+        &.badge {
+            width: fit-content;
+            font-size: 12px;
+            border-radius: 23px;
+            padding: 5px 10px;
+        }
+    }
+}

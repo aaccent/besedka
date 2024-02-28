@@ -1,0 +1,141 @@
+@use 'src/styles/general/variables.scss' as *;
+
+.banner {
+    width: 100%;
+    background-image: url('/src/assets/media/content/image-16.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    padding: 0 0 50px 50px;
+    position: relative;
+    height: 753px;
+    display: flex;
+    align-items: end;
+
+    &-wrapper {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #3A3D3EB2;
+        border-radius: 40px;
+    }
+
+    &-content {
+        position: relative;
+        color: var(--white);
+    }
+
+    &-title {
+        font: 400 6.6rem $playfair;
+        margin-bottom: 20px;
+        width: 907px;
+    }
+
+    &-text {
+        font: 400 2rem/1.5 $nunito_400;
+        width: 691px;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+}
+
+.content {
+    padding-top: 100px;
+    width: 1064px;
+
+    &-title,
+    &-title_big,
+    &-subtitle {
+        margin: 50px 0 20px;
+    }
+
+    &-title {
+        font: 500 5.2rem $nunito_500;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &_big {
+            font: 600 4.2rem/1.48 $nunito_600;
+        }
+    }
+
+    &-text {
+        font: 400 2.4rem/1.5 $nunito_400;
+
+        p {
+            margin-top: 0
+        }
+
+        &_small {
+            font: 400 2rem/1.48 $nunito_400;
+            margin-top: 18px;
+        }
+    }
+
+    &-quote {
+        background-color: #efdfc733;
+        padding: 12px 24px;
+        border-left: 4px solid var(--beige);
+        font: 400 2rem/1.48 $nunito_400;
+        margin-bottom: 10px;
+
+        &_author {
+            font: 400 1.6rem/1.5 $nunito_400;
+            color: #3A3D3E80;
+        }
+    }
+
+    &-image {
+        width: 1390px;
+        margin-top: 40px;
+        overflow: hidden;
+
+        img {
+            border-radius: 20px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-subtitle {
+        font: 700 3.2rem/1.48 $nunito_700;
+    }
+
+    &-ul, &-ol {
+       font: 400 2rem/1.48 $nunito_400;
+       padding-left: 20px;
+       margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .banner {
+        border-radius: 0;
+        height: 630px;
+        padding: 0 10px 50px;
+
+        &-wrapper {
+            border-radius: 0;
+        }
+
+        &-title {
+            font: 400 3.6rem $playfair;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        &-text {
+            font: 400 1.6rem/1.5 $nunito_400;
+            width: 100%;
+        }
+
+    }
+}
