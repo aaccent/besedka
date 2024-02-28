@@ -1,2 +1,47 @@
+include layout/utils
+
+-
+    var menu = [
+        {
+            name: 'Услуги',
+            list: [ 'Муштари', 'Абсалямова' ]
+        },
+        {
+            name: 'Мастер-классы',
+            list: [ 'Муштари', 'Абсалямова' ]
+        },
+        { name: 'События' },
+        { name: 'Магазин' },
+        { name: 'Контакты' },
+    ]
+
+mixin header-logo(variant)
+    if variant = 1
+        .header__logo-block
+            +anchor('/'): +img(require('media/static/besedka_header_en.svg')).header__logo
+            .header__logo-block-body
+                +anchor('tel:8 843 221 03 73').header__logo-block-tel 8 843 221 03 73
+                +wrapBreak: span.header__logo-block-address Казань, Муштари, 2а
+    else
+        .header__logo-block
+            +anchor('/'): +img(require('media/static/besedka_header_ru.svg')).header__logo
+            .header__logo-block-body
+                +anchor('tel:8 843 264 51 15').header__logo-block-tel 8 843 264 51 15
+                +wrapBreak: span.header__logo-block-address Казань, Абсалямова, 19
+
 header.header
     .container
+        +header-logo(1)
+        +header-logo(2)
+        .header__menu-wrapper
+            +btn('menu').header__close-menu
+            .header__logo-list
+                +header-logo(1)
+                +header-logo(2)
+            nav.header__menu
+                ul.header__menu-list
+            +popupBtn('call').header__call-button.btn.icon_call заказать звонок
+        +btn('menu').header__mobile-menu
+            span
+            span
+            span
