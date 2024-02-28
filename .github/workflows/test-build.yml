@@ -22,6 +22,6 @@ jobs:
           node-version: '20.x'
           cache: 'pnpm'
 
-        run: |
+      - run: |
           pnpm install
           pnpm run build
