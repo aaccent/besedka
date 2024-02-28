@@ -50,9 +50,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-
-      - name: Unzip artifact
-        run: unzip -O UTF-8 -qq build -d dir
+          path: dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -60,7 +58,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dir
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
