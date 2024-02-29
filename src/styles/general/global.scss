@@ -67,7 +67,7 @@ html.disable-scroll {
   gap: 10px;
   list-style-type: none;
   color: #ffffff80;
-  font: 400 1.4rem $nunito_400;
+  font: var(--text-base-400);
   margin-bottom: 10px;
   list-style: none;
 
