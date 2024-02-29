@@ -28,7 +28,7 @@
   --nunito: 'Nunito', var(--sans);
 
   --header-100_fz: 6.6rem;
-  --header-100: 400 var(--title_fz) var(--playfair);
+  --header-100: 400 var(--header-100_fz) var(--playfair);
 
   --section_title: 400 5.2rem var(--playfair);
 
@@ -36,6 +36,7 @@
   --text-base-100: 500 5.2rem var(--nunito);
   --text-base-200: 600 4.2rem/1.48 var(--nunito);
   --text-base-300: 700 3.2rem/1.48 var(--nunito);
+  --text-base-350: 400 2.4rem/1.5 var(--nunito);
   --text-base-400: 400 2rem/1.5 var(--nunito);
   --text-base-500: 400 1.4rem var(--nunito);
 
@@ -44,6 +45,12 @@
 
   @media only screen and (max-width: 1000px) {
     --title_fz: 400 3.6rem var(--playfair);
+    --header-100: 400 3.6rem var(--playfair);
+    --section_title: 400 3.6rem var(--playfair);
+    --text-base-350: 400 1.6rem/1.5 var(--nunito);
+    --text-base-400: 400 1.6rem/1.5 var(--nunito);
+    --text-base-100: 500 2.4rem var(--nunito);
+    --text-base-200: 600 1.8rem/1.48 var(--nunito);
   }
 }
 

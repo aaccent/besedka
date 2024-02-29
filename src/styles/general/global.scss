@@ -43,7 +43,7 @@ ul, ol {
 
 body {
   overflow-x: clip;
-  font: 400 2rem 'Playfair_Display';
+  font: var(--text-base-400);
   background-color: var(--bg-color);
 }
 
