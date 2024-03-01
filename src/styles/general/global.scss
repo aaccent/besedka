@@ -65,11 +65,10 @@ html.disable-scroll {
   display: flex;
   align-items: center;
   gap: 10px;
-  list-style-type: none;
   color: #ffffff80;
   font: var(--text-base-400);
   margin-bottom: 10px;
-  list-style: none;
+  list-style: none none;
 
   li:last-child {
     color: var(--white);
@@ -93,10 +92,5 @@ html.disable-scroll {
 @media screen and (max-width: 1000px) {
   .section {
     padding: 50px 10px;
-  
-    &:first-child {
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 }
