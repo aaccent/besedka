@@ -6,6 +6,17 @@ html {
   scroll-behavior: smooth;
 }
 
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1230px;
+}
+
 .main-wrapper {
   position: relative;
   display: flex;
@@ -18,12 +29,22 @@ html {
   flex: 1 1 0;
 }
 
+.section {
+  padding: 100px 30px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
 .hidden {
   display: none;
 }
 
 body {
   overflow-x: clip;
+  font: var(--text-base-400);
+  background-color: var(--bg-color);
 }
 
 html.disable-scroll {
@@ -40,80 +61,36 @@ html.disable-scroll {
   box-sizing: border-box !important;
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff80;
+  font: var(--text-base-400);
+  margin-bottom: 10px;
+  list-style: none none;
 
-body {
-  font-family: $nunito_reg;
-  font-size: $text20;
-  color: $black_100;
+  li:last-child {
+    color: var(--white);
+  }
+
+  li:not(:first-child) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: '';
+      background-image: url('media/static/point.svg');
+      display: block;
+      width: 4px;
+      height: 4px;
+    }
+  }
 }
 
-h1 {
-  font-family: $playfair;
-  font-size: $title_h1;
-  font-weight: 400;
-  color: $black_100;
-  margin-bottom: 50px;
-}
-
-.main {
-  padding: 0 30px;
-  margin: 0 auto;
-  width: 100%;
-
+@media screen and (max-width: 1000px) {
   .section {
-    padding: 100px 0;
-
-    h2 {
-      font-family: $playfair;
-      font-size: $title_h2;
-      font-weight: 400;
-      color: $primary;
-      margin-bottom: 20px;
-    }
-
-    &.seo-block {
-      font-size: $text18;
-      h2 {
-        font-size: 32px;
-        font-weight: 400;
-      }
-    }
+    padding: 50px 10px;
   }
-}
-
-@media screen and (max-width: 390px) {
-  body {
-    font-family: $nunito_reg;
-    font-size: $text16;
-  }
-  
-  h1 {
-    font-family: $playfair;
-    font-size: $mob_title;
-    line-height: 45px;
-  }
-  
-  .main {
-    padding: 0 10px;
-  
-    .section {
-      padding: 50px 0;
-  
-      h2 {
-        font-family: $playfair;
-        font-size: $mob_title;
-        line-height: 48px;
-      }
-  
-      &.seo-block {
-        font-size: $text16;
-      }
-    }
-  }
-}
-
-.swiper,
-.swiper-wrapper,
-.swiper-slide {
-  box-sizing: border-box !important;
 }

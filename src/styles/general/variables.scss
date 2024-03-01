@@ -1,36 +1,61 @@
 @use './fonts' as *;
 
+// Colors
 :root {
-  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --primary: #413127;
+  --brown: #602314;
+  --beige: #EFDFC7;
+  --gold: #DD7F34;
+  --black_100: #3A3D3E;
+  --white: #FFFFFF;
+  --white20: #ffffff33;
+  --white25: #ffffff40;
+  --white15: #ffffff26;
+  --white59: #ffffff96;
+  --grey: #F9F9F9;
+  --black_80: #3A3D3ECC;
+  --black_60: #3A3D3E99;
+  --black_40: #3A3D3E66;
+  --black_20: #3A3D3E33;
+  --black_10: #3A3D3E1A;
+  --bg-color: #F9F9F9;
 }
 
-$primary: #413127;
-$brown: #602314;
-$beige: #EFDFC7;
-$gold: #DD7F34;
-$black_100: #3A3D3E;
-$white: #FFFFFF;
-$grey: #F9F9F9;
-$black_80: #3A3D3ECC;
-$black_60: #3A3D3E99;
-$black_40: #3A3D3E66;
-$black_20: #3A3D3E33;
-$black_10: #3A3D3E1A;
+// Fonts
+:root {
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --playfair: 'Playfair_Display', var(--sans);
+  --nunito: 'Nunito', var(--sans);
 
-$playfair: 'Playfair_Display';
-$nunito_reg: 'Nunito_Regular';
-$nunito_SB: 'Nunito_SemiBold';
-$nunito_M: 'Nunito_Medium';
+  --header-100_fz: 6.6rem;
+  --header-100: 400 var(--header-100_fz) var(--playfair);
 
-$title_h1: 66px;
-$title_h2: 52px;
-$content_title_h3: 42px;
-$content_title_h4: 32px;
-$mob_title: 36px;
-$text24: 24px;
-$text20: 20px;
-$text18: 18px;
-$text16: 16px;
+  --section_title: 400 5.2rem var(--playfair);
 
-$line_150: 150%;
-$line_140: 140%;
+  --text-base-50: 400 6.6rem var(--playfair);
+  --text-base-100: 500 5.2rem var(--nunito);
+  --text-base-200: 600 4.2rem/1.48 var(--nunito);
+  --text-base-300: 700 3.2rem/1.48 var(--nunito);
+  --text-base-350: 400 2.4rem/1.5 var(--nunito);
+  --text-base-400: 400 2rem/1.5 var(--nunito);
+  --text-base-500: 400 1.4rem var(--nunito);
+
+
+  --text-btn: 400 1.6rem var(--nunito);
+
+  @media only screen and (max-width: 1000px) {
+    --title_fz: 400 3.6rem var(--playfair);
+    --header-100: 400 3.6rem var(--playfair);
+    --section_title: 400 3.6rem var(--playfair);
+    --text-base-350: 400 1.6rem/1.5 var(--nunito);
+    --text-base-400: 400 1.6rem/1.5 var(--nunito);
+    --text-base-100: 500 2.4rem var(--nunito);
+    --text-base-200: 600 1.8rem/1.48 var(--nunito);
+  }
+}
+
+
+
+
+
+

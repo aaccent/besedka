@@ -1,0 +1,12 @@
+mixin banner(breadcrumbs, title, text)
+    section.section
+        div.banner
+            .banner-wrapper
+            .banner-content 
+                ul.breadcrumbs
+                    each bc in breadcrumbs
+                        li=bc
+                h1.banner-title=title
+                .banner-text: p=text
+                    if block
+                        block
