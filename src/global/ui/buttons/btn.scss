@@ -5,6 +5,7 @@
     font: var(--text-btn);
     display: flex;
     align-items: center;
+    width: fit-content;
 
     &.header-call::before {
         content: '';
