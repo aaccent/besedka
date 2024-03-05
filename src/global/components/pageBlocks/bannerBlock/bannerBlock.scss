@@ -44,6 +44,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .banner-block {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .banner {
         border-radius: 0;
         height: 630px;
