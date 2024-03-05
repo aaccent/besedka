@@ -2,23 +2,23 @@
 
 // Colors
 :root {
-  --primary: #413127;
-  --brown: #602314;
-  --beige: #EFDFC7;
-  --gold: #DD7F34;
-  --black_100: #3A3D3E;
-  --white: #FFFFFF;
-  --white20: #ffffff33;
-  --white25: #ffffff40;
-  --white15: #ffffff26;
-  --white59: #ffffff96;
-  --grey: #F9F9F9;
-  --black_80: #3A3D3ECC;
-  --black_60: #3A3D3E99;
-  --black_40: #3A3D3E66;
-  --black_20: #3A3D3E33;
-  --black_10: #3A3D3E1A;
-  --bg-color: #F9F9F9;
+  --primary: hsl(23, 25%, 20%);
+  --brown: hsl(12, 66%, 23%);
+  --beige: hsl(36, 56%, 86%);
+  --gold: hsl(27, 71%, 54%);
+  --black_100: hsl(195, 3%, 24%);
+  --white: hsl(0, 0%, 100%);
+  --white20: hsla(0, 0%, 100%, 0.2);
+  --white25: hsla(0, 0%, 100%, 0.25);
+  --white15: hsla(0, 0%, 100%, 0.15);
+  --white59: hsla(0, 0%, 100%, 0.59);
+  --grey: hsl(0, 0%, 98%);
+  --black_80: hsla(195, 3%, 24%, 0.8);
+  --black_60: hsla(195, 3%, 24%, 0.6);
+  --black_40: hsla(195, 3%, 24%, 0.4);
+  --black_20: hsla(195, 3%, 24%, 0.2);
+  --black_10: hsla(195, 3%, 24%, 0.1);
+  --bg-color: hsl(0, 0%, 98%);
 }
 
 // Fonts
