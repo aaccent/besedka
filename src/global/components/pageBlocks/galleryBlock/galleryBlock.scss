@@ -39,28 +39,28 @@
     &-item {
         position: relative;
         height: 803px;
+        transition: transform .5s;
 
         img {
             border-radius: 40px;
             width: 535px;
             height: 803px;
             object-fit: cover;
-            transition: transform .5s;
+        }
 
-            &:hover {
-                transform: translateY(-20px);
-                transition: transform .5s;
-            }
+        &:hover {
+            transform: translateY(-20px);
+            transition: transform .5s;
         }
 
         .blured {
             position: absolute;
             top: -59px;
-            left: 50px;
+            left: 20px;
             z-index: -1;
             width: 493px;
             height: 740px;
-            filter: blur(594px);
+            filter: blur(300px);
         }
 
         .item-info {
