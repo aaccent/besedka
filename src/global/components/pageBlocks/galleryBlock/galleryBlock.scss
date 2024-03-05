@@ -108,6 +108,9 @@
             .blured {
                 width: 296px;
                 height: 442px;
+                top: -22px;
+                left: 22px;
+                filter: blur(380px);
             }
         }
     }
