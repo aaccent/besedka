@@ -21,6 +21,11 @@
   --bg-color: hsl(0, 0%, 98%);
 }
 
+// Filters
+:root {
+  --filter-black_100: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(359%) hue-rotate(149deg) brightness(88%) contrast(82%);
+}
+
 // Fonts
 :root {
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
@@ -30,27 +35,39 @@
   --header-100_fz: 6.6rem;
   --header-100: 400 var(--header-100_fz) var(--playfair);
 
-  --section_title: 400 5.2rem var(--playfair);
+  --section_title_fz: 5.2rem;
+  --section_title: 400 var(--section_title_fz) var(--playfair);
 
-  --text-base-50: 400 6.6rem var(--playfair);
-  --text-base-100: 500 5.2rem var(--nunito);
-  --text-base-200: 600 4.2rem/1.48 var(--nunito);
-  --text-base-300: 700 3.2rem/1.48 var(--nunito);
-  --text-base-350: 400 2.4rem/1.5 var(--nunito);
-  --text-base-400: 400 2rem/1.5 var(--nunito);
-  --text-base-500: 400 1.4rem var(--nunito);
+  --text-base-50_fz: 6.6rem;
+  --text-base-50: 400 var(--text-base-50_fz) var(--playfair);
 
+  --text-base-100_fz: 5.2rem;
+  --text-base-100: 500 var(--text-base-100_fz) var(--nunito);
+
+  --text-base-200_fz: 4.2rem;
+  --text-base-200: 600 var(--text-base-200_fz)/1.48 var(--nunito);
+
+  --text-base-300_fz: 3.2rem;
+  --text-base-300: 700 var(--text-base-300_fz)/1.48 var(--nunito);
+
+  --text-base-350_fz: 2.4rem;
+  --text-base-350: 400 var(--text-base-350_fz)/1.5 var(--nunito);
+
+  --text-base-400_fz: 2rem;
+  --text-base-400: 400 var(--text-base-400_fz)/1.5 var(--nunito);
+
+  --text-base-500_fz: 1.4rem;
+  --text-base-500: 400 var(--text-base-500_fz) var(--nunito);
 
   --text-btn: 400 1.6rem var(--nunito);
 
   @media only screen and (max-width: 1000px) {
-    --title_fz: 400 3.6rem var(--playfair);
-    --header-100: 400 3.6rem var(--playfair);
-    --section_title: 400 3.6rem var(--playfair);
-    --text-base-350: 400 1.6rem/1.5 var(--nunito);
-    --text-base-400: 400 1.6rem/1.5 var(--nunito);
-    --text-base-100: 500 2.4rem var(--nunito);
-    --text-base-200: 600 1.8rem/1.48 var(--nunito);
+    --header-100_fz: 3.6rem;
+    --section_title_fz: 3.6rem;
+    --text-base-350_fz: 1.6rem;
+    --text-base-400_fz: 1.6rem;
+    --text-base-100_fz: 2.4rem;
+    --text-base-200_fz: 1.8rem;
   }
 }
 
