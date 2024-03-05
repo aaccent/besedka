@@ -61,6 +61,7 @@
         background-color: var(--white25);
         color: var(--white);
         padding: 8px 16px;
+        backdrop-filter: blur(24px);
     }
 
     &.footer-call {
@@ -138,6 +139,7 @@
             font-size: 12px;
             border-radius: 23px;
             padding: 5px 10px;
+            backdrop-filter: blur(24px);
         }
     }
 

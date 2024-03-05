@@ -1,0 +1,19 @@
+extends layout/page
+include layout/utils
+
+append head
+    link(href=require('./styles.scss') rel="stylesheet")
+
+append main     
+    .section
+        ul.breadcrumbs
+            li Главная
+            li Мастера
+        h1.masters-title Мастера
+        .masters-gallery_block   
+            .masters-adress_title Муштари
+            include components/mastersGallery/template 
+        .masters-gallery_block 
+            .masters-adress_title Абсалямова
+            include components/mastersGallery/template.pug
+    include global/components/pageBlocks/reasonsBlock/template

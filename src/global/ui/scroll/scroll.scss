@@ -1,0 +1,17 @@
+.section {
+
+    .scrollbar-track,
+    .scrollbar-thumb {
+        height: 20px;
+        border-radius: 100px;
+    }
+
+    .scrollbar-track-x {
+        background-color: transparent;
+        border: 1px solid #3A3D3E26;
+    }
+
+    .scrollbar-thumb {
+        background-color: #3A3D3E33;
+    }
+}
