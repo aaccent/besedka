@@ -1,24 +1,30 @@
 @use './fonts' as *;
+@use "styles/utils";
 
 // Colors
 :root {
-  --primary: #413127;
-  --brown: #602314;
-  --beige: #EFDFC7;
-  --gold: #DD7F34;
-  --black_100: #3A3D3E;
-  --white: #FFFFFF;
-  --white20: #ffffff33;
-  --white25: #ffffff40;
-  --white15: #ffffff26;
-  --white59: #ffffff96;
-  --grey: #F9F9F9;
-  --black_80: #3A3D3ECC;
-  --black_60: #3A3D3E99;
-  --black_40: #3A3D3E66;
-  --black_20: #3A3D3E33;
-  --black_10: #3A3D3E1A;
-  --bg-color: #F9F9F9;
+  --primary: hsl(23, 25%, 20%);
+  --brown: hsl(12, 66%, 23%);
+  --beige: hsl(36, 56%, 86%);
+  --gold: hsl(27, 71%, 54%);
+  --black_100: hsl(195, 3%, 24%);
+  --white: hsl(0, 0%, 100%);
+  --white20: hsla(0, 0%, 100%, 0.2);
+  --white25: hsla(0, 0%, 100%, 0.25);
+  --white15: hsla(0, 0%, 100%, 0.15);
+  --white59: hsla(0, 0%, 100%, 0.59);
+  --grey: hsl(0, 0%, 98%);
+  --black_80: hsla(195, 3%, 24%, 0.8);
+  --black_60: hsla(195, 3%, 24%, 0.6);
+  --black_40: hsla(195, 3%, 24%, 0.4);
+  --black_20: hsla(195, 3%, 24%, 0.2);
+  --black_10: hsla(195, 3%, 24%, 0.1);
+  --bg-color: hsl(0, 0%, 98%);
+}
+
+// Filters
+:root {
+  --filter-black_100: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(359%) hue-rotate(149deg) brightness(88%) contrast(82%);
 }
 
 // Fonts
@@ -30,27 +36,43 @@
   --header-100_fz: 6.6rem;
   --header-100: 400 var(--header-100_fz) var(--playfair);
 
-  --section_title: 400 5.2rem var(--playfair);
+  --section_title_fz: 5.2rem;
+  --section_title: 400 var(--section_title_fz) var(--playfair);
 
-  --text-base-50: 400 6.6rem var(--playfair);
-  --text-base-100: 500 5.2rem var(--nunito);
-  --text-base-200: 600 4.2rem/1.48 var(--nunito);
-  --text-base-300: 700 3.2rem/1.48 var(--nunito);
-  --text-base-350: 400 2.4rem/1.5 var(--nunito);
-  --text-base-400: 400 2rem/1.5 var(--nunito);
-  --text-base-500: 400 1.4rem var(--nunito);
+  --text-base-50_fz: 6.6rem;
+  --text-base-50: 400 var(--text-base-50_fz) var(--playfair);
 
+  --text-base-100_fz: 5.2rem;
+  --text-base-100: 500 var(--text-base-100_fz) var(--nunito);
+
+  --text-base-200_fz: 4.2rem;
+  --text-base-200: 600 var(--text-base-200_fz)/1.48 var(--nunito);
+
+  --text-base-300_fz: 3.2rem;
+  --text-base-300: 700 var(--text-base-300_fz)/1.48 var(--nunito);
+
+  --text-base-350_fz: 2.4rem;
+  --text-base-350: 400 var(--text-base-350_fz)/1.5 var(--nunito);
+
+  --text-base-400_fz: 2rem;
+  --text-base-400: 400 var(--text-base-400_fz)/1.5 var(--nunito);
+
+  --text-base-500_fz: 1.4rem;
+  --text-base-500: 400 var(--text-base-500_fz) var(--nunito);
 
   --text-btn: 400 1.6rem var(--nunito);
 
-  @media only screen and (max-width: 1000px) {
-    --title_fz: 400 3.6rem var(--playfair);
-    --header-100: 400 3.6rem var(--playfair);
-    --section_title: 400 3.6rem var(--playfair);
-    --text-base-350: 400 1.6rem/1.5 var(--nunito);
-    --text-base-400: 400 1.6rem/1.5 var(--nunito);
-    --text-base-100: 500 2.4rem var(--nunito);
-    --text-base-200: 600 1.8rem/1.48 var(--nunito);
+  @media only screen and (max-width: utils.$desktop1360) {
+    --text-base-400_fz: 1.7rem;
+  }
+
+  @media only screen and (max-width: utils.$tablet1100) {
+    --header-100_fz: 3.6rem;
+    --section_title_fz: 3.6rem;
+    --text-base-350_fz: 1.6rem;
+    --text-base-400_fz: 1.6rem;
+    --text-base-100_fz: 2.4rem;
+    --text-base-200_fz: 1.8rem;
   }
 }
 
