@@ -15,7 +15,7 @@ ol {
 .container {
   margin: 0 auto;
   padding: 0 30px;
-  max-width: 1230px;
+  max-width: 1728px;
 }
 
 .main-wrapper {
@@ -49,6 +49,7 @@ ol {
 body {
   overflow-x: clip;
   font: var(--text-base-400);
+  color: var(--black_100);
   background-color: var(--bg-color);
 }
 
