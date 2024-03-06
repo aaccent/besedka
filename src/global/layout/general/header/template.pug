@@ -1,2 +1,64 @@
+include layout/utils
+
+-
+    var menu = [
+        {
+            name: 'Услуги',
+            list: [ 'Муштари', 'Абсалямова' ]
+        },
+        {
+            name: 'Мастер-классы',
+            list: [ 'Муштари', 'Абсалямова' ]
+        },
+        { name: 'События' },
+        { name: 'Магазин' },
+        { name: 'Контакты' },
+    ]
+
+mixin header-logo-inner(ru)
+    +anchor('/').header__logo-link
+        unless ru
+            +img(require('media/static/besedka-en-logo_color.png?as=webp')).header__logo._en-version
+        else
+            +img(require('media/static/besedka-ru-logo_color.png?as=webp')).header__logo._ru-version
+    .header__logo-block-body
+        unless ru
+            +anchor('tel:8 843 221 03 73').header__logo-block-tel 8 843 221 03 73
+        else
+            +anchor('tel:8 843 221 03 73').header__logo-block-tel 8 843 264 51 15
+        +wrapBreak: span.header__logo-block-address
+            unless ru
+                | Казань, Муштари, 2а
+            else
+                | Казань, Абсалямова, 19
+
+mixin header-logo(ru, isMobile)
+    if isMobile
+        +header-logo-inner(ru)
+    else
+        .header__logo-block: +header-logo-inner(ru)
+
 header.header
     .container
+        .header__logo-list
+            +header-logo(false)
+            +header-logo(true)
+        .header__menu-wrapper
+            +btn('menu').header__close-button
+            .header__inner-logo-list
+                +header-logo(false, true)
+                +header-logo(true, true)
+            nav.header__menu
+                ul.header__menu-list
+                    each item in menu
+                        li.header__menu-item
+                            if 'list' in item
+                                +btn.header__menu-item-title= item.name
+                            else
+                                +anchor.header__menu-item-title= item.name
+                            if 'list' in item
+                                ul.header__menu-list
+                                    each subItem in item.list
+                                        li.header__menu-item: +anchor.header__menu-item-title= subItem
+            +popupBtn('call').header__call-button.btn заказать звонок
+        +btn('menu').header__mobile-menu-button

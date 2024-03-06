@@ -8,6 +8,7 @@ dist
 
 # npm
 node_modules
+package-lock.json
 
 # Tests
 test.*
