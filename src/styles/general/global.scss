@@ -35,6 +35,10 @@ ul, ol {
   &:first-child {
     padding-top: 0;
   }
+
+  &-white {
+    background-color: var(--white);
+  }
 }
 
 .hidden {
