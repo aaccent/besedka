@@ -6,7 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   margin: 0;
 }
@@ -66,17 +67,35 @@ html.disable-scroll {
   box-sizing: border-box !important;
 }
 
+.banner .breadcrumbs {
+  color: #ffffff80;
+  margin-bottom: 10px;
+  font: var(--text-base-400);
+
+  li:last-child {
+    color: var(--white);
+  }
+
+  li:not(:first-child):before {
+    background-image: url('media/static/point.svg');
+  }
+}
+
 .breadcrumbs {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ffffff80;
-  font: var(--text-base-400);
-  margin-bottom: 10px;
+  color: var(--black_100);
+  font: var(--text-base-500);
+  margin-bottom: 20px;
   list-style: none none;
 
-  li:last-child {
-    color: var(--white);
+  li {
+    opacity: .5;
+
+    &:last-child {
+      opacity: 1;
+    }
   }
 
   li:not(:first-child) {
@@ -86,11 +105,31 @@ html.disable-scroll {
 
     &::before {
       content: '';
-      background-image: url('media/static/point.svg');
+      background-image: url('media/static/point_black.svg');
       display: block;
       width: 4px;
       height: 4px;
     }
+  }
+}
+
+.open-block.full-text {
+  height: fit-content;
+  padding-bottom: 50px;
+}
+
+.hidden-text {
+  max-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+
+  &.opened {
+      max-height: fit-content;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .5s, visibility .5s;
+      margin-top: 20px;
   }
 }
 

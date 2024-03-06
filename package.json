@@ -27,6 +27,7 @@
     "sass": "^1.62.1",
     "sass-loader": "^13.3.1",
     "sharp": "^0.31.3",
+    "smooth-scrollbar": "^8.8.4",
     "swiper": "^8.4.7",
     "ts-loader": "^9.4.3",
     "typescript": "^5.1.3",

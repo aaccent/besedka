@@ -5,6 +5,7 @@
     font: var(--text-btn);
     display: flex;
     align-items: center;
+    width: fit-content;
 
     &.header-call::before {
         content: '';
@@ -97,6 +98,26 @@
     }
 }
 
+.read-full {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--black_100);
+    font-size: 1.8rem;
+
+    &::after {
+        content: "";
+        display: block;
+        background-image: url('src/assets/media/static/eye.svg');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: .8;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .btn {
         width: 100%;
@@ -118,5 +139,10 @@
             border-radius: 23px;
             padding: 5px 10px;
         }
+    }
+
+    .read-full {
+        margin: 20px 0 30px;
+        font-size: 1.6rem;
     }
 }
