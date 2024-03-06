@@ -1,4 +1,5 @@
 @use './fonts' as *;
+@use "styles/utils";
 
 // Colors
 :root {
@@ -61,7 +62,11 @@
 
   --text-btn: 400 1.6rem var(--nunito);
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: utils.$desktop1360) {
+    --text-base-400_fz: 1.7rem;
+  }
+
+  @media only screen and (max-width: utils.$tablet1100) {
     --header-100_fz: 3.6rem;
     --section_title_fz: 3.6rem;
     --text-base-350_fz: 1.6rem;
