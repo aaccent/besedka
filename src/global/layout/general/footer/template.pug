@@ -1,2 +1,80 @@
+include layout/utils
+
+-
+    var menu = [
+        {
+            name: 'Услуги',
+            list: [ 'Муштари', 'Абсалямова' ]
+        },
+        {
+            name: 'Мастер-классы',
+            list: [ 'Муштари', 'Абсалямова' ]
+        },
+        { name: 'События' },
+        { name: 'Магазин' },
+        { name: 'Контакты' },
+        { name: 'Мастера' },
+        { name: 'Отзывы' },
+        { name: 'О компании' },
+    ]
+
+mixin logo-block(isEn)
+    +anchor.footer__logo-link
+        if isEn
+            +img(require('media/static/besedka-en-logo_color.png')).footer__logo
+        else
+            +img(require('media/static/besedka-ru-logo_color.png')).footer__logo
+    .footer__tel-block
+        if isEn
+            +anchor('tel:8 843 221 03 73').footer__tel 8 843 221 03 73
+            span.footer__city Муштари
+        else
+            +anchor('tel:8 843 264 51 15').footer__tel 8 843 264 51 15
+            span.footer__city Абсалямова
+    .footer__address
+        if isEn
+            | Казань,
+            br
+            | ул. Муштари, 2а
+        else
+            | Казань,
+            br
+            | ул. Абсалямова, 19
+    .footer__socials
+        +anchor.footer__social-link: img(src=require('media/static/tg-logo.svg') alt="")
+        +anchor.footer__social-link: img(src=require('media/static/insta-logo.svg') alt="")
+        +anchor.footer__social-link: img(src=require('media/static/vk-logo.svg') alt="")
+
+
 footer.footer
     .container
+        .footer__content
+            .footer__logos-block
+                +logo-block(true)
+                +logo-block(false)
+            .footer__menu-block
+                nav.footer__menu: ul.footer__menu-list
+                    each item in menu
+                        li.footer__menu-item
+                            if 'list' in item
+                                +wrapBreak: button.footer__menu-item-title= item.name
+                                ul.footer__menu-list
+                                    each subItem in item.list
+                                        li.footer__menu-item: +anchor.footer__menu-item-title= subItem
+                            else
+                                +anchor.footer__menu-item-title= item.name
+                    li.footer__info-item Пн — Пт с 9 до 20
+                    li.footer__info-item: +anchor('mailto:mail@example.com') mail@example.com
+            +popupBtn('call').footer__call-btn.btn заказать звонок
+
+        .footer__info-block
+            span.footer__copyright © 2000 - 2023 ООО «Название компании»
+            span.footer__policy
+                a(href="#") Политика конфиденциальности
+                |
+                | и
+                |
+                a(href="#") условия обработки персональных данных
+            .footer__creators
+                span Разработано:
+                +anchor('aaccent.ru'): +img(require('media/static/accent.svg')).footer__creators-img
