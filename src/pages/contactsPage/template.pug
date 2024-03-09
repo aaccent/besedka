@@ -1,0 +1,76 @@
+extends layout/page
+include layout/utils
+
+append head
+    link(href=require('./styles.scss') rel="stylesheet")
+
+append main       
+    .section.contacts
+        ul.breadcrumbs
+            li Главная
+            li Контакты
+        h1.contacts-title Контакты 
+        .contacts-block 
+            .contact
+                .contact-top 
+                    +img('/assets/media/static/besedka_header_en.svg').logo-en
+                    .icon
+                        +img('/assets/media/static/location.svg')
+                .contact-body 
+                    .address г. Казань, ул. Баумана, 1
+                    .work-hours Пн-Пт с 8 до 20:00
+                    .tel-mail 
+                        .tel 8 (976) 543 21 00
+                        +img('/assets/media/static/point_black.svg')
+                        .mail info_c@mail.ru
+                    .socials 
+                        .social
+                            +img('/assets/media/static/tg_black.svg')
+                        .social
+                            +img('/assets/media/static/insta_black.svg')
+                        .social 
+                            +img('/assets/media/static/vk_black.svg')
+                .contact-bottom 
+                    .btn Показать на карте
+                    a(href="#") Реквизиты компании
+            .contact
+                .contact-top 
+                    +img('/assets/media/static/besedka_header_ru.svg').logo-ru
+                    .icon
+                        +img('/assets/media/static/location.svg')
+                .contact-body 
+                    .address г. Казань, ул. Баумана, 1
+                    .work-hours Пн-Пт с 8 до 20:00
+                    .tel-mail 
+                        .tel 8 (976) 543 21 00
+                        +img('/assets/media/static/point_black.svg')
+                        .mail info_c@mail.ru
+                    .socials 
+                        .social
+                            +img('/assets/media/static/tg_black.svg')
+                        .social
+                            +img('/assets/media/static/insta_black.svg')
+                        .social 
+                            +img('/assets/media/static/vk_black.svg')
+                .contact-bottom 
+                    .btn Показать на карте
+                    a(href="#") Реквизиты компании
+        .map  
+            .contact-block 
+                .logo 
+                    +img('/assets/media/static/besedka_header_en.svg').logo-en
+                .contact-body 
+                    .address г. Казань, ул. Баумана, 1
+                    .work-hours Пн-Пт с 8 до 20:00
+                    .tel-mail 
+                        .tel 8 (976) 543 21 00
+                        +img('/assets/media/static/point_black.svg')
+                        .mail info_c@mail.ru
+                    .socials 
+                        .social
+                            +img('/assets/media/static/tg_black.svg')
+                        .social
+                            +img('/assets/media/static/insta_black.svg')
+                        .social 
+                            +img('/assets/media/static/vk_black.svg')
+                .btn Проложить маршрут
