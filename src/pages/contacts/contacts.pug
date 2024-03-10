@@ -3,6 +3,7 @@ include layout/utils
 
 append head
     link(href=require('./styles.scss') rel="stylesheet")
+    link(href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet")
 
 append main       
     .section.contacts
@@ -11,13 +12,13 @@ append main
             li Контакты
         h1.contacts-title Контакты 
         .contacts-block 
-            .contact
+            .contact.mushtari(data-coords='49.137864, 55.787923')
                 .contact-top 
-                    +img('/assets/media/static/besedka_header_en.svg').logo-en
+                    +img('/assets/media/static/besedka-en-logo_color.png').logo-en
                     .icon
                         +img('/assets/media/static/location.svg')
                 .contact-body 
-                    .address г. Казань, ул. Баумана, 1
+                    .address г. Казань, ул. Муштари 2а
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
                         .tel 8 (976) 543 21 00
@@ -31,15 +32,15 @@ append main
                         .social 
                             +img('/assets/media/static/vk_black.svg')
                 .contact-bottom 
-                    .btn Показать на карте
+                    .btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
-            .contact
+            .contact.absaliyamova(data-coords='49.109145, 55.819778')
                 .contact-top 
-                    +img('/assets/media/static/besedka_header_ru.svg').logo-ru
+                    +img('/assets/media/static/besedka-ru-logo_color.png').logo-ru
                     .icon
                         +img('/assets/media/static/location.svg')
                 .contact-body 
-                    .address г. Казань, ул. Баумана, 1
+                    .address г. Казань, ул. Абсалямова 19
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
                         .tel 8 (976) 543 21 00
@@ -53,14 +54,15 @@ append main
                         .social 
                             +img('/assets/media/static/vk_black.svg')
                 .contact-bottom 
-                    .btn Показать на карте
+                    .btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
         .map  
+            .map__view
             .contact-block 
                 .logo 
-                    +img('/assets/media/static/besedka_header_en.svg').logo-en
+                    +img('/assets/media/static/besedka-en-logo_color.png').logo-en
                 .contact-body 
-                    .address г. Казань, ул. Баумана, 1
+                    .address г. Казань, ул. Муштари 19
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
                         .tel 8 (976) 543 21 00

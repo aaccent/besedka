@@ -1,7 +1,25 @@
+@use 'swiper/scss';
+@use 'swiper/scss/scrollbar';
+
 .gallery {
     background-color: #0D1D26;
     position: relative;
     padding: 0;
+
+    .swiper-scrollbar {
+        height: 20px;
+        border-radius: 100px;
+        border: 1px solid var(--white20);
+        position: static;
+        margin-top: 50px;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid var(--white15);
+
+        &-drag {
+            background-color: var(--white20);
+        }
+    }
 
     &-title {
         font: var(--section_title);
@@ -14,37 +32,16 @@
     }
 
     &-container {
-        padding: 269px 30px 150px;
-
-        .scroll-content {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 20px;
-            height: 803px;
-        }
-
-        .scrollbar-track-x {
-            border-color: #FFFFFF26;
-            width: 1668px;
-            overflow: hidden;
-            left: 30px;
-            bottom: 100px;
-        }
-
-        .scrollbar-thumb-x {
-            background-color: #FFFFFF33;
-        }
+        padding: 269px 30px 150px; 
     }
 
     &-item {
         position: relative;
-        height: 803px;
         transition: transform .5s;
 
         img {
             border-radius: 40px;
-            width: 535px;
-            height: 803px;
+            width: 100%;
             object-fit: cover;
         }
 
@@ -58,8 +55,7 @@
             top: -59px;
             left: 20px;
             z-index: -1;
-            width: 493px;
-            height: 740px;
+            width: 100%;
             filter: blur(300px);
         }
 
@@ -80,16 +76,6 @@
     @media screen and (max-width: 1000px) {
         &-container {
             padding: 148px 10px 100px;
-
-            .scroll-content {
-                height: 513px;
-            }
-
-            .scrollbar-track-x {
-                width: 370px;
-                left: 10px;
-                bottom: 50px;
-            }
         }
 
         &-title {
@@ -97,17 +83,14 @@
         }
 
         &-item {
-            height: 513px;
 
             img {
-                width: 341px;
-                height: 513px;
+                width: 100%;
                 border-radius: 26px;
             }
 
             .blured {
-                width: 296px;
-                height: 442px;
+                width: 100%;
                 top: -22px;
                 left: 22px;
                 filter: blur(380px);

@@ -1,66 +1,37 @@
+@use 'swiper/scss';
+@use 'swiper/scss/scrollbar';
+@use 'swiper/scss/grid';
+
 .clients {
-
-    &-container_mob[data-scrollbar] {
-        display: none;
-    }
-
     &-title {
         font: var(--section_title);
         margin-bottom: 38px;
     }
 
-    .scroll-content {
+    .swiper-scrollbar {
+        height: 20px;
+        border-radius: 100px;
+        position: static;
+        margin-top: 30px;
+        background-color: transparent;
+        border: 1px solid #3A3D3E26;
+        width: 100%;
+
+        &-drag {
+            background-color: var(--black_20);
+        }
+    }
+
+    .client {
+        height: 150px;
         display: flex;
-        flex-wrap: nowrap;
-        gap: 20px;
-        height: 200px;
-
-        .client {
-            min-width: 450px;
-            min-height: 150px;
-            max-width: 450px;
-            max-height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                max-height: 150px;
-                max-width: 342px;
-            }
-        }
+        align-items: center;
+        justify-content: center;
     }
+}
 
-    @media screen and (max-width: 1000px) {
-        &-container[data-scrollbar] {
-            display: none;
-        }
-
-        &-container_mob[data-scrollbar] {
-            display: block;
-        }
-
-        .scroll-content {
-            height: 288px;
-            flex-direction: column;
-
-            .first-row,
-            .second-row {
-                display: flex;
-            }
-
-            .client {
-                min-width: 281px;
-                min-height: 107px;
-                max-width: 281px;
-                max-height: 107px;
-
-                img {
-                    max-height: 107px;
-                    max-width: 242px;
-                }
-            }
-        }
+@media screen and (max-width: 1000px) {
+    .client img {
+        max-width: 249px;
     }
-
 }

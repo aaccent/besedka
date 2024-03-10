@@ -1,0 +1,144 @@
+@use 'swiper/scss';
+@use 'swiper/scss/thumbs';
+
+.mc {
+    position: relative;
+    height: 802px;
+    background-color: white;
+    border-radius: 40px;
+
+    &-gallery {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 794px;
+    }
+
+    &-description {
+        position: absolute;
+        top: 30px;
+        right: 60px;
+        width: 734px;
+
+        .title {
+            font: var(--text-base-200);
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 120%;
+        }
+
+        .text {
+            font-size: 1.6rem;
+            line-height: 140%;
+        }
+    }
+
+    &-submit {
+        margin-top: 146px;
+        width: 734px;
+        display: flex;
+        align-items: center;
+        padding: 20px 20px 20px 40px;
+        justify-content: space-between;
+        background-color: #C58B5D1A;
+        border-radius: 80px;
+
+        .btn {
+            width: 252px;
+            display: block;
+            text-align: center;
+            border-radius: 100px;
+        }
+
+        .price p:first-child {
+            font: var(--text-base-500);
+            color: var(--black_60);
+        }
+
+        .price p:last-child {
+            font: var(--text-base-350);
+            margin-top: 6px;
+        }
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 622px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.mc-swiper {
+    box-sizing: border-box;
+    margin-top: 20px;
+
+    .swiper-slide {
+        opacity: 0.4;
+
+        img {
+            width: 93px;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .mc {
+        position: static;
+        height: fit-content;
+
+        &-gallery {
+            position: static;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &-description {
+            position: static;
+            width: 100%;
+
+            .title {
+                font-size: 2.4rem;
+            }
+
+            .mc-submit {
+                width: 100%;
+                flex-direction: column;
+                border-radius: 0;
+                padding: 31px;
+                gap: 20px;
+                margin-top: 30px;
+            }
+        }
+
+        .mc-swiper-thumbs .swiper-slide img {
+            height: 290px;
+        }
+
+        .mc-swiper .swiper-slide img {
+            width: 67px;
+            height: 70px;
+        }
+
+        .price p:first-child {
+            text-align: center;
+        }
+
+        .price p:last-child {
+            font-size: 2.4rem;
+        }
+    }
+}

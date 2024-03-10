@@ -1,93 +1,54 @@
 include layout/utils
 
-.masters-gallery(data-scrollbar)
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
-    .master 
-        +img('/assets/media/content/master_1.png?as=webp')
-        .master-info 
-            .info-top
-                .btn.badge Муштари
-                +img('/assets/media/static/arrow.svg')
-            .info-bottom 
-                .name Евгений Беляев
-                p Специалист по длинным названиями
+-
+    var content = [
+        {
+            img: '/assets/media/content/master_1.png?as=webp',
+            badge: 'Муштари',
+            name: 'Евгений Беляев',
+            text: 'Специалист по длинным названиями',
+        },
+
+        {
+            img: '/assets/media/content/master_2.png?as=webp',
+            badge: 'Муштари',
+            name: 'Евгений Беляев',
+            text: 'Специалист по длинным названиями',
+        },
+
+        {
+            img: '/assets/media/content/master_3.png?as=webp',
+            badge: 'Муштари',
+            name: 'Евгений Беляев',
+            text: 'Специалист по длинным названиями',
+        },
+
+        {
+            img: '/assets/media/content/master_4.png?as=webp',
+            badge: 'Муштари',
+            name: 'Евгений Беляев',
+            text: 'Специалист по длинным названиями',
+        },
+
+        {
+            img: '/assets/media/content/master_5.png?as=webp',
+            badge: 'Муштари',
+            name: 'Евгений Беляев',
+            text: 'Специалист по длинным названиями',
+        },
+    ]
+
+.masters-gallery.master-swiper
+    .swiper-wrapper
+        each item in content
+            .master.swiper-slide
+                +img(item.img).master-img
+                .master-info 
+                    .info-top
+                        .btn.badge=item.badge
+                        +img('/assets/media/static/arrow.svg')
+                    .info-bottom 
+                        .name=item.name
+                        p=item.text
+    .swiper-scrollbar
+        

@@ -82,6 +82,7 @@ html.disable-scroll {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   color: var(--black_100);
@@ -97,14 +98,16 @@ html.disable-scroll {
     }
   }
 
-  li:not(:first-child) {
+  li:not(:last-child) {
     display: flex;
     align-items: center;
     gap: 10px;
 
-    &::before {
+    &::after {
       content: '';
       background-image: url('media/static/point_black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
       display: block;
       width: 4px;
       height: 4px;
