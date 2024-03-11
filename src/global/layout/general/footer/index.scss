@@ -1,11 +1,39 @@
 @use "styles/utils";
 
 .footer {
+  position: relative;
   padding: 50px 0 70px;
   background-color: #11232C;
   color: var(--white);
+  overflow: hidden;
+
+  .container {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      @include utils.circle(438px);
+      display: block;
+      background-color: #2D5B73;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: -173px;
+      top: -199px;
+      filter: blur(220px);
+    }
+
+    &::after {
+      right: -70px;
+      bottom: -180px;
+      filter: blur(260px);
+    }
+  }
 
   &__content {
+    position: relative;
+    z-index: 1;
     margin-bottom: 20px;
     padding: 50px 30px;
     display: flex;
@@ -160,6 +188,8 @@
   }
 
   &__info-block {
+    position: relative;
+    z-index: 1;
     display: flex;
     color: hsl(0, 0%, 100%, .5);
     font-size: 1.6rem;
@@ -192,6 +222,13 @@
 @media only screen and (max-width: utils.$tablet1100) {
   .footer {
     padding-bottom: 40px;
+
+    .container {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
 
     &__content {
       padding: 0;
