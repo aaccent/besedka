@@ -2,39 +2,53 @@ import { Swiper, Thumbs, Scrollbar, Grid } from 'swiper';
 
 Swiper.use([Thumbs, Scrollbar, Grid]);
 
-function isMobile() {
-  return window.innerWidth < 1000
-}
-
-const clientsSwiper = new Swiper('.clients-swiper', {
-  slidesPerView: isMobile() ? 1.3 : 3.6,
-  grid: isMobile() ? { rows: 2, fill: 'row' } : undefined,
+new Swiper('.clients-swiper', {
+  slidesPerView: 3.6,
+  grid: undefined,
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: false,
     draggable: true,
+  },
+
+  breakpoints: {
+    1000: {
+      slidesPerView: 1.3,
+      grid: { rows: 2, fill: 'row' },
+    }
   }
 })
 
-const masterSwiper = new Swiper('.master-swiper', {
+new Swiper('.master-swiper', {
   spaceBetween: 20,
-  slidesPerView: isMobile() ? 1.3 : 4.2,
+  slidesPerView: 4.2,
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: false,
     draggable: true,
   },
+
+  breakpoints: {
+    1000: {
+      slidesPerView: 1.3,
+    }
+  }
 });
 
-const gallery = new Swiper('.gallery-swiper', {
+new Swiper('.gallery-swiper', {
   spaceBetween: 20,
-  slidesPerView: isMobile() ? 1.1 : 3.1,
+  slidesPerView: 3.1,
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: false,
     draggable: true,
-
   },
+  
+  breakpoints: {
+    1000: {
+      slidesPerView: 1.1,
+    }
+  }
 });
 
 const masterClassSwiper = new Swiper(".mc-swiper", {
@@ -42,7 +56,8 @@ const masterClassSwiper = new Swiper(".mc-swiper", {
   freeMode: true,
   watchSlidesProgress: true,
 });
-const masterClassSwiperThumbs = new Swiper(".mc-swiper-thumbs", {
+
+new Swiper(".mc-swiper-thumbs", {
   spaceBetween: 2,
   thumbs: {
     swiper: masterClassSwiper,

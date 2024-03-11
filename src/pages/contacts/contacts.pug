@@ -3,7 +3,7 @@ include layout/utils
 
 append head
     link(href=require('./styles.scss') rel="stylesheet")
-    link(href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet")
+    link(href='https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet')
 
 append main       
     .section.contacts
@@ -12,7 +12,7 @@ append main
             li Контакты
         h1.contacts-title Контакты 
         .contacts-block 
-            .contact.mushtari(data-coords='49.137864, 55.787923')
+            .contact(data-lng="49.137864" data-lat="55.787923" data-address="mushtari")
                 .contact-top 
                     +img('/assets/media/static/besedka-en-logo_color.png').logo-en
                     .icon
@@ -34,7 +34,7 @@ append main
                 .contact-bottom 
                     .btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
-            .contact.absaliyamova(data-coords='49.109145, 55.819778')
+            .contact(data-lng="49.109145" data-lat="55.819778" data-address="absalyamova")
                 .contact-top 
                     +img('/assets/media/static/besedka-ru-logo_color.png').logo-ru
                     .icon
@@ -76,3 +76,6 @@ append main
                         .social 
                             +img('/assets/media/static/vk_black.svg')
                 .btn Проложить маршрут
+
+append scripts
+    script(src=require('./main.ts'))
