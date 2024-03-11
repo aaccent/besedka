@@ -1,0 +1,47 @@
+@use "styles/utils";
+
+.events {
+  &__title {
+    margin-bottom: 30px;
+    font: var(--section_title);
+    text-align: center;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .card {
+    height: 704px;
+  }
+
+  &__link {
+    margin: 50px auto 0;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .events {
+    .swiper {
+      margin: 0 -10px;
+      padding: 0 10px;
+    }
+
+    .swiper-wrapper {
+      gap: 0;
+    }
+
+    .card {
+      height: 400px;
+    }
+
+    &__link {
+      margin-top: 30px;
+    }
+  }
+}

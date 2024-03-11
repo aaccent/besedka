@@ -1,0 +1,29 @@
+include layout/utils
+include ui/card/card
+
+-
+  var cards = [
+    {
+      text: 'Субботний Арт-завтрак: декорируем свечи и наслаждаемся хрустящими круассанами с разными начинками.',
+      img: require('media/content/card-img1.jpg?as=webp'),
+    },
+    {
+      text: 'Скидка 19% в День рождения на любой групповой мастер-класс ',
+      isDiscount: true,
+      img: require('media/content/card-img2.jpg?as=webp'),
+    },
+    {
+      text: 'Скидка 19% в День рождения на любой мастер-класс',
+      isDiscount: true,
+      img: require('media/content/card-img3.jpg?as=webp'),
+    },
+  ]
+
++section.events
+  h2.events__title События
+  .swiper.events__swiper
+    .swiper-wrapper
+      each cardProps in cards
+        +card(cardProps).swiper-slide
+    .swiper-scrollbar
+  +anchor.btn.view-all.events__link смотреть всё

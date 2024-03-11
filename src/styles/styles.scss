@@ -3,6 +3,8 @@
 @use 'general/variables';
 @use 'general/fonts';
 @use 'general/global';
+@use "node_modules/swiper/swiper";
+@use "node_modules/swiper/modules/scrollbar/scrollbar";
 
 // Popup
 @use 'features/popup/index';
@@ -11,7 +13,8 @@
 @use 'ui/buttons/close-btn';
 @use 'ui/buttons/btn';
 @use 'ui/scroll/scroll';
-
+@use 'ui/card/card';
+@use 'ui/swiper-scrollbar/swiper-scrollbar';
 
 // Page
 @use 'layout/general/header';
