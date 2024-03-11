@@ -1,0 +1,20 @@
+mixin card(props)
+  -
+    props = Object.assign({
+      text: '',
+      isDiscount: false,
+      tags: ['Муштари', '21 февраля'],
+      img: '',
+      logo: true,
+    }, props)
+
+  +anchor()(class=`${props.isDiscount ? 'card _discount' : 'card'}`)&attributes(attributes)
+    .card__top
+      .card__top-link-icon
+      .card__badges
+        each tag in props.tags
+          .btn.badge= tag
+      if props.logo
+        .card__logo
+    .card__img-wrapper: +img(props.img).card__img
+    .card__text: p= props.text
