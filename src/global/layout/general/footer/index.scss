@@ -1,0 +1,315 @@
+@use "styles/utils";
+
+.footer {
+  position: relative;
+  padding: 50px 0 70px;
+  background-color: #11232C;
+  color: var(--white);
+  overflow: hidden;
+
+  .container {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      @include utils.circle(438px);
+      display: block;
+      background-color: #2D5B73;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: -173px;
+      top: -199px;
+      filter: blur(220px);
+    }
+
+    &::after {
+      right: -70px;
+      bottom: -180px;
+      filter: blur(260px);
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    padding: 50px 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 100%, .05);
+    border-radius: 30px;
+  }
+
+  &__logos-block {
+    max-width: 485px;
+    width: 100%;
+    display: grid;
+    gap: 0 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__logo-link {
+    grid-row: 1;
+    height: 79px;
+    max-width: 220px;
+  }
+
+  &__logo {
+    height: 100%;
+    width: 100%;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(25deg) brightness(109%) contrast(101%);
+    object-fit: contain;
+    object-position: left;
+  }
+
+  &__tel-block {
+    margin: 22px 0 30px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+  }
+
+  &__call-block &__info-item {
+    display: none;
+  }
+
+  &__address {
+    margin-bottom: 30px;
+    height: fit-content;
+    grid-row: 3;
+    font-size: 1.8rem;
+  }
+
+  &__city {
+    color: hsl(0, 0%, 100%, .5);
+    font-size: 1.6rem;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__social-link {
+    @include utils.circle(30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsl(0, 0%, 100%, .2);
+    @include utils.transition(border-color);
+
+    img {
+      opacity: .5;
+      @include utils.transition(opacity);
+    }
+
+    @include utils.hover() {
+      border-color: hsl(0, 0%, 100%, .5);
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__menu {
+    ul {
+      @include utils.clear-list;
+    }
+  }
+
+  // First level menu
+  &__menu > &__menu-list {
+    display: grid;
+    gap: 20px 110px;
+    grid-template-columns: 1fr 1fr;
+    
+    & > .footer__menu-item:has(> .footer__menu-list) {
+      position: relative;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      &::after {
+        content: '';
+        @include utils.square(18px);
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.10225 6.35225C4.32192 6.13258 4.67808 6.13258 4.89775 6.35225L9 10.4545L13.1023 6.35225C13.3219 6.13258 13.6781 6.13258 13.8977 6.35225C14.1174 6.57192 14.1174 6.92808 13.8977 7.14775L9.39775 11.6477C9.17808 11.8674 8.82192 11.8674 8.60225 11.6477L4.10225 7.14775C3.88258 6.92808 3.88258 6.57192 4.10225 6.35225Z' fill='%233A3D3E'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(0) saturate(100%) invert(95%) sepia(0%) saturate(0%) hue-rotate(117deg) brightness(104%) contrast(105%);
+        opacity: .5;
+        @include utils.transition(scale);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          .footer__menu-list {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          &::after {
+            scale: -1;
+          }
+        }
+      }
+    }
+  }
+
+  // Second level menu
+  &__menu-item > &__menu-list {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #41626F;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 20px;
+    @include utils.transition((opacity, visibility));
+  }
+
+  &__info-item {
+    padding-top: 79px;
+  }
+
+  &__call-btn {
+    height: fit-content;
+    border-color: var(--white59);
+    background-color: #FFFFFF26;
+    color: var(--white);
+  }
+
+  &__info-block {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    color: hsl(0, 0%, 100%, .5);
+    font-size: 1.6rem;
+  }
+
+  &__policy {
+    margin-left: auto;
+
+    a {
+      @include utils.transition(color);
+      @include utils.hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__creators {
+    margin-left: 84px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 300;
+  }
+
+  &__creators-img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet1100) {
+  .footer {
+    padding-bottom: 40px;
+
+    .container {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__content {
+      padding: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+    }
+
+    &__logos-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__menu-block {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      order: 1;
+      border-bottom: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__call-block {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__socials {
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__logo-link {
+      &._en-version {
+        height: 51px;
+        width: 220px;
+      }
+
+      &._ru-version {
+        height: 79px;
+        width: 115px;
+      }
+    }
+
+    &__tel {
+      font-size: 2rem;
+    }
+
+    &__menu-list &__info-item {
+      display: none;
+    }
+
+    &__call-block &__info-item {
+      display: block;
+      padding-top: 0;
+      font-size: 2rem;
+
+      &:last-of-type {
+        margin: 20px 0 50px;
+      }
+    }
+
+    &__menu > &__menu-list {
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+    }
+
+    &__info-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__policy {
+      margin: 20px 0 30px;
+    }
+
+    &__creators {
+      margin-left: 0;
+    }
+  }
+}
