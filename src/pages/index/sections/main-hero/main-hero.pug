@@ -1,0 +1,21 @@
+include layout/utils
+
++section.main-hero
+  .main-hero__content
+    h1.main-hero__title Сеть студий творчества Беседка
+    .main-hero__info
+      span.main-hero__info-title STUDIO BESEDKA
+      div.main-hero__info-text: p
+        | — Проведение творческих встреч с людьми из разных сфер деятельности:
+        | мастер-классы, семинары, презентации продуктов и услуг с представителями
+        | самых разных современных профессий.
+    .main-hero__info
+      span.main-hero__info-title БЕСЕДКА
+      div.main-hero__info-text: p
+        | — уютная студия творчества для взрослых и детей от 5 лет.
+        | Поведение мастер-классов по различным направлениям рукоделия,
+        | кулинарии и флористики.
+  picture.main-hero__img-wrapper
+    source(srcset=require('media/content/main-hero-mobile.jpg?as=webp') media="(max-width: 800px)")
+    source(srcset=require('media/static/no-img.jpg?as=webp'))
+    +img(require('media/static/no-img.jpg?as=webp')).main-hero__img
