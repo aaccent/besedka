@@ -39,7 +39,13 @@
   &__tel-block {
     margin: 22px 0 30px;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
     grid-row: 2;
+  }
+
+  &__call-block &__info-item {
+    display: none;
   }
 
   &__address {
@@ -180,5 +186,93 @@
 
   &__creators-img {
     display: block;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet1100) {
+  .footer {
+    padding-bottom: 40px;
+
+    &__content {
+      padding: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+    }
+
+    &__logos-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__menu-block {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      order: 1;
+      border-bottom: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__call-block {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__socials {
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__logo-link {
+      &._en-version {
+        height: 51px;
+        width: 220px;
+      }
+
+      &._ru-version {
+        height: 79px;
+        width: 115px;
+      }
+    }
+
+    &__tel {
+      font-size: 2rem;
+    }
+
+    &__menu-list &__info-item {
+      display: none;
+    }
+
+    &__call-block &__info-item {
+      display: block;
+      padding-top: 0;
+      font-size: 2rem;
+
+      &:last-of-type {
+        margin: 20px 0 50px;
+      }
+    }
+
+    &__menu > &__menu-list {
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+    }
+
+    &__info-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__policy {
+      margin: 20px 0 30px;
+    }
+
+    &__creators {
+      margin-left: 0;
+    }
   }
 }

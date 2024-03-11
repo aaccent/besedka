@@ -19,11 +19,10 @@ include layout/utils
     ]
 
 mixin logo-block(isEn)
-    +anchor.footer__logo-link
-        if isEn
-            +img(require('media/static/besedka-en-logo_color.png')).footer__logo
-        else
-            +img(require('media/static/besedka-ru-logo_color.png')).footer__logo
+    if isEn
+        +anchor.footer__logo-link._en-version: +img(require('media/static/besedka-en-logo_color.png')).footer__logo
+    else
+        +anchor.footer__logo-link._ru-version: +img(require('media/static/besedka-ru-logo_color.png')).footer__logo
     .footer__tel-block
         if isEn
             +anchor('tel:8 843 221 03 73').footer__tel 8 843 221 03 73
@@ -65,7 +64,10 @@ footer.footer
                                 +anchor.footer__menu-item-title= item.name
                     li.footer__info-item Пн — Пт с 9 до 20
                     li.footer__info-item: +anchor('mailto:mail@example.com') mail@example.com
-            +popupBtn('call').footer__call-btn.btn заказать звонок
+            .footer__call-block
+                .footer__info-item Пн — Пт с 9 до 20
+                .footer__info-item: +anchor('mailto:mail@example.com') mail@example.com
+                +popupBtn('call').footer__call-btn.btn заказать звонок
 
         .footer__info-block
             span.footer__copyright © 2000 - 2023 ООО «Название компании»
