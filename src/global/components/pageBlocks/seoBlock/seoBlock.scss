@@ -1,69 +1,76 @@
-.seo {
-    padding-top: 0;
+@use "styles/utils";
 
-    .seo-block {
-        background-color: var(--white);
-        border-radius: 40px;
-        padding: 50px 123px 50px 50px;
-        height: 526px;
-        overflow: hidden;
-        transition: height .2s;
+.seo-block {
+    background-color: var(--white);
+    border-radius: 40px;
+    padding: 50px 123px 50px 50px;
+    overflow: hidden;
+    transition: height .2s;
 
-        &.full-text {
-            height: fit-content;
-        }
+    h2 {
+        font: var(--section_title);
+        margin-bottom: 20px;
+        color: #413127;
+    }
 
-        h2 {
-            font: var(--section_title);
-            margin-bottom: 20px;
-            color: #413127;
-        }
-
-        p {
-            opacity: .8;
-        }
-
-        p+p {
-            margin-top: 20px;
-        }
-
-        .hidden-text p {
-            margin-top: 20px;
-        }
-
-        .preview-text,
-        .hidden-text {
-            font-size: 1.8rem;
-        }
+    .seo-block-img-wrapper {
+        position: relative;
+        float: right;
+        width: 586px;
+        height: 400px;
+        margin: 10px 0 50px 218px;
 
         img {
             border-radius: 40px;
-            width: 586px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            @include utils.square(586px);
             object-fit: cover;
-            float: right;
-            margin: 10px 0 50px 218px
+            object-position: center;
+        }
+    }
+
+
+    .seo-block-text {
+        font-size: 1.8rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    p {
+        opacity: .8;
+    }
+
+    p+p {
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 0;
+        border-radius: 20px;
+
+        p {
+            font-size: 1.6rem;
         }
 
-        @media screen and (max-width: 1000px) {
-            display: flex;
-            flex-direction: column;
-            height: 806px;
-            padding: 20px;
-            border-radius: 20px;
-
-            p {
-                font-size: 1.6rem;
-            }
-
-            .seo-content {
-                order: 1;
-            }
+        .seo-block-img-wrapper {
+            float: none;
+            margin: 0;
+            width: 100%;
+            height: initial;
+            order: 1;
+            border-radius: 40px 40px 0 0;
 
             img {
-                float: none;
-                margin: 0;
+                position: initial;
                 width: 100%;
-                order: 2;
+                height: 340px;
+                border-radius: 40px 40px 0 0;
             }
         }
     }

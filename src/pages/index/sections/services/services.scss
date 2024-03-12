@@ -1,0 +1,49 @@
+@use "styles/utils";
+
+.services {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--black_20);
+
+  &__list {
+    @include utils.reset-list();
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__item {
+    &:nth-child(1) {
+      grid-row: 1 / span 2;
+    }
+
+    &:last-child {
+      grid-column: 2 / span 2;
+    }
+  }
+
+  .card {
+    height: 100%;
+    min-height: 342px;
+  }
+
+  .swiper-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet1100) {
+  .services {
+    &__list {
+      display: flex;
+      gap: 0;
+    }
+
+    .card {
+      min-height: 401px;
+    }
+
+    .swiper-scrollbar {
+      display: block;
+    }
+  }
+}

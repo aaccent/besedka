@@ -3,7 +3,16 @@ extends layout/page
 append head
     link(href=require('./styles.scss') rel="stylesheet")
 
-append main       
+append main
+    include sections/main-hero/main-hero
+    include sections/events/events
+    include sections/services/services
+    +services({ title: 'Услуги на Абсалямова' })
+    +services({ title: 'Услуги на Муштари' })
+    include sections/info/info
+    include components/pageBlocks/reasonsBlock/template
+    include sections/reviews/reviews
+    include components/pageBlocks/seoBlock/template
 
 append scripts
     script(src=require('./main.ts'))

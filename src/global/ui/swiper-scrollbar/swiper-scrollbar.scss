@@ -1,0 +1,13 @@
+.swiper .swiper-scrollbar {
+  position: static;
+  margin-top: 30px;
+  height: 20px;
+  width: 100%;
+  border-radius: 100px;
+  background-color: transparent;
+  border: 1px solid hsla(195, 3%, 24%, 0.3);
+
+  &-drag {
+    background-color: var(--black_20);
+  }
+}

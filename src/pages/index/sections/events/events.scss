@@ -1,0 +1,56 @@
+@use "styles/utils";
+
+.events {
+  background-color: var(--bg-color);
+
+  &__title {
+    text-align: center;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .card {
+    height: 704px;
+    flex-shrink: 1;
+  }
+
+  &__link {
+    margin: 50px auto 0;
+  }
+
+  .swiper-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .events {
+    .swiper {
+      overflow: visible;
+    }
+
+    .swiper-wrapper {
+      gap: 0;
+    }
+
+    .card {
+      height: 400px;
+      flex-shrink: 0;
+    }
+
+    &__link {
+      margin-top: 30px;
+    }
+
+    .swiper-scrollbar {
+      display: block;
+    }
+  }
+}

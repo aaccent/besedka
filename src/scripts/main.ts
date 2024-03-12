@@ -2,9 +2,13 @@
 import 'layout/general/header/header.js'
 import 'features/popup'
 
-// Ui
-import 'ui/buttons/openBtn'
-import 'ui/swiper/swiper'
+// Components
+import 'components/pageBlocks/seoBlock/seo-block.js'
 
+// Ui
+import 'ui/swiper/swiper'
+import 'ui/review-card/review-card.js'
+
+// Pages
 import 'pages/index/main'
 import 'pages/contacts/main'

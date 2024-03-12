@@ -3,6 +3,8 @@
 @use 'general/variables';
 @use 'general/fonts';
 @use 'general/global';
+@use "node_modules/swiper/swiper";
+@use "node_modules/swiper/modules/scrollbar/scrollbar";
 
 // Popup
 @use 'features/popup/index';
@@ -10,8 +12,12 @@
 // Ui
 @use 'ui/buttons/close-btn';
 @use 'ui/buttons/btn';
-
-
+@use 'ui/card/card';
+@use 'ui/swiper-scrollbar/swiper-scrollbar';
+@use 'ui/text/section-title';
+@use 'ui/review-card/review-card';
+@use 'ui/input/input';
+@use 'ui/textarea/textarea';
 
 // Page
 @use 'layout/general/header';
@@ -27,3 +33,4 @@
 @use 'components/mastersGallery/mastersGallery';
 @use 'components/pageBlocks/galleryBlock/galleryBlock';
 @use 'components/pageBlocks/clientsBlock/clientsBlock';
+@use 'components/pageBlocks/form-section/form-section';

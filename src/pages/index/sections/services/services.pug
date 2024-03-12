@@ -1,0 +1,49 @@
+include layout/utils
+include ui/card/card
+
+-
+  var services = [
+    {
+      text: 'Мастер-классы',
+      img: require('media/content/services-img1.jpg?as=webp'),
+    },
+    {
+      text: 'Выездные мастер-классы',
+      img: require('media/content/services-img2.jpg?as=webp'),
+    },
+    {
+      text: 'Мероприятия под ключ',
+      img: require('media/content/services-img3.jpg?as=webp'),
+    },
+    {
+      text: 'Магазин',
+      img: require('media/content/services-img4.jpg?as=webp'),
+    },
+    {
+      text: 'Сертификаты',
+      img: require('media/content/services-img5.jpg?as=webp'),
+    },
+    {
+      text: 'Фоторепортажная съемка',
+      img: require('media/content/services-img6.jpg?as=webp'),
+    },
+    {
+      text: 'Кулинария',
+      img: require('media/content/services-img7.jpg?as=webp'),
+    },
+  ]
+
+mixin services(props)
+  -
+    props = Object.assign({
+      title: '',
+    }, props)
+
+  +section.services
+    h2.services__title.section-title= props.title
+    .swiper.services__swiper
+      ul.services__list.swiper-wrapper
+        each service in services
+          li.services__item.swiper-slide
+            +card(service)
+      .swiper-scrollbar

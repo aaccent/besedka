@@ -1,0 +1,114 @@
+@use "styles/utils";
+
+.main-hero {
+  background-color: var(--white);
+
+  .container {
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font: var(--header-100);
+  }
+
+  &__info + &__info {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid var(--black_20);
+  }
+
+  &__info-title {
+    color: var(--brown);
+    font: 3rem/1.5 var(--playfair);
+  }
+
+  &__info-text,
+  &__info-text > p {
+    display: inline;
+  }
+
+  &__img-wrapper {
+    max-width: 854px;
+    width: 100%;
+    height: 872px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) and (orientation: landscape) {
+  .main-hero {
+    min-height: 100svh;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) and (orientation: portrait) {
+  .main-hero {
+    height: 90svh;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .main-hero {
+    position: relative;
+    color: var(--white);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: hsl(0, 0%, 0%, .5);
+    }
+
+    .container {
+      padding-right: 10px;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    &__content {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__img-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__info + &__info {
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid hsl(0, 0%, 100%, .2);
+    }
+
+    &__info-title {
+      color: var(--white);
+      font-size: 2rem;
+    }
+
+    &__info-text {
+      font-size: 1.6rem;
+    }
+  }
+}
