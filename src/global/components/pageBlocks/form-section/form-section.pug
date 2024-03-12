@@ -1,0 +1,19 @@
+include layout/utils
+include ui/input/input
+include ui/textarea/textarea
+
++section({ container: false }).form-section
+  .form-section__inner
+    h2.form-section__title Ответим на все ваши вопросы, оставьте заявку и мы свяжемся с вами
+    div.form-section__subtitle Подтекст, если уловить хореический ритм или аллитерацию на "р", иллюстрирует культурный размер.
+    form.form-section__form
+      +wrapBreak: +input({ name: "name", placeholder: "Имя" })
+      +wrapBreak: +input({ type: 'tel', name: "tel", placeholder: "Телефон" })
+      +wrapBreak: +textarea({ name: "comment", placeholder: "Комментарий", required: false })
+      +wrapBreak: button(type="submit").btn.submit Оставить заявку
+      .form-section__privacy
+        | Нажимая кнопку «Оставить заявку», вы даёте согласие на
+        | обработку персональных данных и соглашаетесь с политикой конфиденциальности
+  .container.form-section__decorative-bg
+    +img(require('media/static/form-section-img1.jpg?as=webp')).form-section__decorative-img
+    +img(require('media/static/form-section-img2.jpg?as=webp')).form-section__decorative-img

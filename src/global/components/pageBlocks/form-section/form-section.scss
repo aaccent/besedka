@@ -1,0 +1,129 @@
+@use "styles/utils";
+
+.form-section {
+  position: relative;
+  padding-bottom: 0;
+  background-color: var(--white);
+
+  &__decorative-bg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    translate: -50% 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  &__decorative-img {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 40px 40px 0 0;
+
+    &:nth-child(1) {
+      left: -133px;
+      width: 577px;
+      height: 600px;
+    }
+
+    &:nth-child(2) {
+      right: -90px;
+      width: 540px;
+      height: 527px;
+    }
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 610px;
+    width: 100%;
+  }
+
+  &__title,
+  &__subtitle,
+  &__privacy {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font: 3.2rem/1.2 var(--playfair);
+    color: #413127;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font: 1.8rem/1.4 var(--nunito);
+    opacity: .5;
+  }
+
+  &__form {
+    margin: 0 auto;
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .btn.submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__privacy {
+    margin-top: 10px;
+    opacity: .5;
+    font: 300 1.4rem/1 var(--nunito);
+  }
+}
+
+@media only screen and (max-width: utils.$tablet1100) {
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__inner {
+      padding: 0 10px;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
+
+    &__privacy {
+      margin-top: 0;
+    }
+
+    &__decorative-bg {
+      position: relative;
+    }
+
+    &__decorative-img {
+      &:nth-child(1) {
+        position: relative;
+        left: -47px;
+        width: 327px;
+        height: 315px;
+        opacity: .5;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        right: -42px;
+        bottom: -17px;
+        @include utils.square(270px);
+      }
+    }
+  }
+}
