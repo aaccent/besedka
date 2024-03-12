@@ -1,0 +1,14 @@
+mixin textarea(props)
+  -
+    props = Object.assign({
+      name: '',
+      placeholder: '',
+      required: true,
+    }, props)
+
+  .textarea.input: textarea(
+    name=props.name
+    type=props.type
+    placeholder=props.placeholder,
+    required=props.required,
+  )&attributes(attributes)

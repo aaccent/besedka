@@ -1,0 +1,15 @@
+mixin input(props)
+  -
+    props = Object.assign({
+      name: '',
+      type: 'text',
+      placeholder: '',
+      required: true,
+    }, props)
+
+  .input: input(
+    name=props.name
+    type=props.type
+    placeholder=props.placeholder,
+    required=props.required,
+  )&attributes(attributes)
