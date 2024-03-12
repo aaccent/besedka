@@ -60,5 +60,9 @@ header.header
                                 ul.header__menu-list
                                     each subItem in item.list
                                         li.header__menu-item: +anchor.header__menu-item-title= subItem
+                ul.header__submenu
+                    li.header__submenu-item: +anchor.header__submenu-item-link Мастера
+                    li.header__submenu-item: +anchor.header__submenu-item-link Отзывы
+                    li.header__submenu-item: +anchor.header__submenu-item-link О компании
             +popupBtn('call').header__call-button.btn заказать звонок
         +btn('menu').header__mobile-menu-button
