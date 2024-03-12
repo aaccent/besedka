@@ -1,6 +1,8 @@
 @use "styles/utils";
 
 .events {
+  background-color: var(--bg-color);
+
   &__title {
     text-align: center;
   }

@@ -1,6 +1,9 @@
 @use "styles/utils";
 
 .services {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--black_20);
+
   &__list {
     @include utils.reset-list();
     display: grid;
