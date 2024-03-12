@@ -6,6 +6,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
   background-color: var(--white);
   border-radius: 20px;
 
@@ -47,12 +49,7 @@
     line-height: 1.4;
   }
 
-  &__text:has(+ &__read-more) {
-    margin-bottom: 30px;
-  }
-
   &__read-more {
-    margin-top: auto;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -80,7 +77,8 @@
 @media only screen and (max-width: utils.$tablet800) {
   .review-card {
     padding: 20px;
-    min-height: 347px;
+    min-height: initial;
+    gap: 20px;
     border-radius: 10px;
 
     &__title {

@@ -1,13 +1,16 @@
 include layout/utils
 
+-
+  var text = 'Жирмунский, однако, настаивал, что синхрония доступна. Анжамбеман семантически отражает хорей. Представленный лексико-семантический анализ является психолингвистическим в своей основе, но графомания возможна. Подтекст, если уловить хореический ритм или аллитерацию на "р", иллюстрирует культурный размер. Голос персонажа'
+
 mixin review-card(props)
   -
     props = Object.assign({
       title: 'Ольга Вавилова',
-      text: '',
+      text: text,
     }, props)
 
-  .review-card
+  .review-card: .review-card__inner
     .review-card__title-wrapper
       .review-card__title= props.title
       .review-card__rating 5
