@@ -1,0 +1,32 @@
+include layout/utils
+
+-
+  var text1 = 'На занятиях вы научитесь самым необычным направлениям искусства, пришедших с различных уголков мира. Мастер-классы позволят вам по-новому взглянуть на окружающие вещи.'
+
+  var text2 = 'Из привычных предметов вы научитесь делать настоящие произведения искусства: декор для комнаты, стильные кухонные принадлежности, кукол, композиции и другие потрясающие изделия. Программы мастер-классов разрабатываются индивидуально для каждого занятия и адаптируется под участников. Заниматься будет интересно детям и взрослым, начинающим и опытным рукодельницам.'
+
++section({ container: false }).info
+  .info__block: .container
+    .info__block-img-wrapper
+      +img(require('media/content/info-block-img2.jpg?as=webp')).info__block-img
+      +img(require('media/content/info-block-img2_2.jpg?as=webp')).info__block-img
+      +img(require('media/content/info-block-img2_3.jpg?as=webp')).info__block-img
+    .info__block-content
+      h2.info__block-title
+        | Мастер-классы в студии творчества «Беседка» проходят в интересном
+        | формате, который гармонично сочетает в себе теорию и практику.
+      .info__block-text
+        p= text1
+        p= text2
+  .info__block: .container
+    .info__block-content
+      h2.info__block-title
+        | Мастер-классы в студии творчества «BESEDKA STUDIO» проходят в интересном
+        | формате, который гармонично сочетает в себе теорию и практику.
+      .info__block-text
+        p= text1
+        p= text2
+    .info__block-img-wrapper
+      +img(require('media/content/info-block-img1.jpg?as=webp')).info__block-img
+      +img(require('media/content/info-block-img1_2.jpg?as=webp')).info__block-img
+      +img(require('media/content/info-block-img1_3.jpg?as=webp')).info__block-img
