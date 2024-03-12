@@ -5,6 +5,7 @@
 @use 'general/global';
 @use "node_modules/swiper/swiper";
 @use "node_modules/swiper/modules/scrollbar/scrollbar";
+@use "node_modules/mapbox-gl/dist/mapbox-gl.css";
 
 // Popup
 @use 'features/popup/index';
