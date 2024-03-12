@@ -10,7 +10,7 @@
 // Ui
 @use 'ui/buttons/close-btn';
 @use 'ui/buttons/btn';
-@use 'ui/scroll/scroll';
+
 
 
 // Page
@@ -26,3 +26,4 @@
 @use 'components/pageBlocks/mastersBlock/mastersBlock';
 @use 'components/mastersGallery/mastersGallery';
 @use 'components/pageBlocks/galleryBlock/galleryBlock';
+@use 'components/pageBlocks/clientsBlock/clientsBlock';

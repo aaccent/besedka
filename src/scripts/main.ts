@@ -4,4 +4,7 @@ import 'features/popup'
 
 // Ui
 import 'ui/buttons/openBtn'
-import 'ui/scroll/scroll'
+import 'ui/swiper/swiper'
+
+import 'pages/index/main'
+import 'pages/contacts/main'
