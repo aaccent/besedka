@@ -36,4 +36,10 @@
 @use 'components/pageBlocks/form-section/form-section';
 
 // Pages
-@use "pages/reviews/styles";
+@use "pages/reviews/styles" as reviews-page;
+@use "pages/master/styles" as master-page;
+@use "pages/masters/styles" as masters-page;
+@use "pages/master-class/styles" as master-class-page;
+@use "pages/sample/styles" as sample-page;
+@use "pages/contacts/styles" as contacts-page;
+@use "pages/index/styles" as index-page;
