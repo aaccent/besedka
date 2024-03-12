@@ -6,6 +6,9 @@ append head
 append main
     include sections/main-hero/main-hero
     include sections/events/events
+    include sections/services/services
+    +services({ title: 'Услуги на Абсалямова' })
+    +services({ title: 'Услуги на Муштари' })
 
 append scripts
     script(src=require('./main.ts'))
