@@ -33,8 +33,7 @@
 @media only screen and (max-width: utils.$tablet800) {
   .events {
     .swiper {
-      margin: 0 -10px;
-      padding: 0 10px;
+      overflow: visible;
     }
 
     .swiper-wrapper {
