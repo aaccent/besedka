@@ -1,5 +1,5 @@
-import createMqSwiper from 'features/createMqSwiper'
 import { Scrollbar } from 'swiper'
+import createMqSwiper from 'features/createMqSwiper'
 
 createMqSwiper({
   mq: '(max-width: 1100px)',

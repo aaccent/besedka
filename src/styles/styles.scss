@@ -35,6 +35,7 @@
 @use 'components/pageBlocks/galleryBlock/galleryBlock';
 @use 'components/pageBlocks/clientsBlock/clientsBlock';
 @use 'components/pageBlocks/form-section/form-section';
+@use "components/pageBlocks/services/services";
 
 // Pages
 @use "pages/reviews/styles" as reviews-page;
