@@ -21,16 +21,15 @@ new Swiper('.clients-swiper', {
 
 new Swiper('.master-swiper', {
   spaceBetween: 20,
-  slidesPerView: 4.2,
+  slidesPerView: 1.2,
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: false,
     draggable: true,
   },
-
   breakpoints: {
     1000: {
-      slidesPerView: 1.3,
+      slidesPerView: 4.2,
     }
   }
 });

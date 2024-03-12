@@ -41,7 +41,7 @@ include layout/utils
 .masters-gallery.master-swiper
     .swiper-wrapper
         each item in content
-            .master.swiper-slide
+            +anchor.master.swiper-slide
                 +img(item.img).master-img
                 .master-info 
                     .info-top
@@ -51,4 +51,3 @@ include layout/utils
                         .name=item.name
                         p=item.text
     .swiper-scrollbar
-        
