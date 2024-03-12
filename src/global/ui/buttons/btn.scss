@@ -78,6 +78,10 @@
         text-transform: uppercase;
         position: relative;
 
+        &.shadow {
+            box-shadow:0 0 44px var(--gold);
+        }
+
         &::after {
             content: "";
             position: absolute;

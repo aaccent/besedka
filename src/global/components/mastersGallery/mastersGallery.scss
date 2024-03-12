@@ -1,21 +1,32 @@
+@use 'swiper/scss';
+@use 'swiper/scss/scrollbar';
+
 .masters-gallery {
     margin-top: 42px;
-    height: 578px;
 
-    .scroll-content {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 20px;
+    .swiper-scrollbar {
+        height: 20px;
+        border-radius: 100px;
+        position: static;
+        margin-top: 50px;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #3A3D3E26;
+
+        &-drag {
+            background-color: var(--black_20);
+        }
     }
 
     .master {
         position: relative;
         font-size: 1.8rem;
-        height: 508px;
 
-        img {
+        &-img {
             border-radius: 20px;
-            height: 100%;
+            display: block;
+            object-fit: cover;
+            width: 100%;
         }
 
         &::before {
