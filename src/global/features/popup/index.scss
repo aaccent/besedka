@@ -1,6 +1,7 @@
 @use 'styles/utils';
 @use 'ui/buttons/close-btn';
 
+
 .popup {
   padding: 15px;
   position: fixed;
@@ -19,6 +20,15 @@
   opacity: 0;
   background-color: hsla(140, 100%, 2%, 0.8);
 
+  .form-section__title, .form-section__subtitle, .form-section__privacy {
+    text-align: left;
+  }
+
+  .btn.submit {
+    width: 100%;
+    justify-content: center;
+  }
+
   &.opened {
     visibility: visible;
     opacity: 1;
@@ -31,8 +41,45 @@
 
   .close-btn {
     z-index: 30;
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    right: -60px;
+    background-color: #FFFFFF40;
+    border-radius: 50%;
+  }
+
+  &-body {
+    display: flex;
+    width: 1106px;
+  }
+
+  &-form {
+    width: calc(1106px - 543px);
+    background-color: white;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    padding: 50px;
+  }
+
+  &-image {
+    background-image: url('src/assets/media/content/gallery_item.png');
+    background-position: center;
+    background-size: cover;
+    width: 543px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .review-body-popup {
+    background-color: white;
+    width: 1106px;
+    border-radius: 40px;
+    padding: 50px 421px 62px 50px;
+    font-size: 18px;
+
+    .review-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
 }
 

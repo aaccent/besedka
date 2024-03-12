@@ -13,10 +13,10 @@
   &::before, &::after {
     content: '';
     position: absolute;
-    width: 2.6px;
-    height: 26px;
+    width: 1px;
+    height: 13px;
     border-radius: 4px;
-    background-color: #909090;
+    background-color: white;
     @include utils.transition(background-color);
   }
 
