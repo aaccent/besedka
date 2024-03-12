@@ -1,0 +1,22 @@
+@use "styles/utils";
+
+.map-block {
+  padding: 0;
+
+  &__inner {
+    height: 730px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .map-block {
+    &__inner {
+      height: 510px;
+    }
+  }
+}
