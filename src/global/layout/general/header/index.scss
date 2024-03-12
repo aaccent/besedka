@@ -3,6 +3,7 @@
 .header {
   position: relative;
   z-index: 10;
+  margin-bottom: 73px;
   background-color: var(--white);
   border-bottom: 1px solid var(--black_20);
 
@@ -272,6 +273,8 @@
 
 @media only screen and (max-width: utils.$tablet1200) {
   .header {
+    margin-bottom: 0;
+
     .container {
       padding-top: 16px;
       padding-bottom: 16px;
