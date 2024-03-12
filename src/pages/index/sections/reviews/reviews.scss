@@ -1,0 +1,11 @@
+@use "styles/utils";
+
+.reviews {
+  &__list {
+    @include utils.clear-list;
+  }
+
+  &__swiper {
+    overflow: visible;
+  }
+}

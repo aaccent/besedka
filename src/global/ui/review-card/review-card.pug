@@ -1,0 +1,14 @@
+include layout/utils
+
+mixin review-card(props)
+  -
+    props = Object.assign({
+      title: 'Ольга Вавилова',
+      text: '',
+    }, props)
+
+  .review-card
+    .review-card__title-wrapper
+      .review-card__title= props.title
+      .review-card__rating 5
+    .review-card__text!= props.text
