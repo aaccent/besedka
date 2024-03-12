@@ -1,27 +1,29 @@
-.masters-title {
-    text-align: left;
-    margin-bottom: 50px;
-    font: var(--text-base-50);
-}
-
-.masters-gallery_block:not(:last-child) {
-    margin-bottom: 50px;
-}
-
-.masters-adress_title {
-    font: var(--text-base-200)
-}
-
-@media screen and (max-width: 1000px) {
+.master-page {
     .masters-title {
-        margin-bottom: 30px;
+        text-align: left;
+        margin-bottom: 50px;
+        font: var(--text-base-50);
+    }
+
+    .masters-gallery_block:not(:last-child) {
+        margin-bottom: 50px;
     }
 
     .masters-adress_title {
-        font-size: 2.4rem;
+        font: var(--text-base-200)
     }
 
-    .masters-gallery{
-        margin-top: 20px;
+    @media screen and (max-width: 1000px) {
+        .masters-title {
+            margin-bottom: 30px;
+        }
+
+        .masters-adress_title {
+            font-size: 2.4rem;
+        }
+
+        .masters-gallery{
+            margin-top: 20px;
+        }
     }
 }
