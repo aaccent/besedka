@@ -3,7 +3,7 @@ include layout/utils
 
 append head
 
-append main       
+append main
     include global/components/pageBlocks/bannerBlock/template
     +banner(['Главная', 'О компании'], 'О компании', 'Проведение творческих встреч с людьми из разных сфер деятельности: мастер-классы, семинары, презентации продуктов и услуг с представителями самых разных современных профессий.')
     include global/components/pageBlocks/contentBlock/template
@@ -11,3 +11,6 @@ append main
     include global/components/pageBlocks/reasonsBlock/template
     include global/components/pageBlocks/mastersBlock/template
     include global/components/pageBlocks/galleryBlock/template
+
+append before-footer
+    include components/pageBlocks/map-block/map-block

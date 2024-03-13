@@ -1,0 +1,12 @@
+extends layout/page
+
+append main
+    include global/components/pageBlocks/bannerBlock/template
+    +banner([
+        'Главная',
+        'Мастер-классы на Абсалямова'
+    ], 'Мастер-классы на Абсалямова', 'Проведение творческих встреч с людьми из разных сфер деятельности: мастер-классы, семинары, презентации продуктов и услуг с представителями самых разных современных профессий.')
+    include components/pageBlocks/master-classes-section/master-classes-section
+    +master-classses-section({ filter: false })
+    include components/pageBlocks/seoBlock/template
+    include components/pageBlocks/reasonsBlock/template

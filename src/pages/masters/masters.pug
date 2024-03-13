@@ -1,11 +1,8 @@
 extends layout/page
 include layout/utils
 
-append head
-    link(href=require('./styles.scss') rel="stylesheet")
-
-append main     
-    .section
+append main
+    +section.master-list-page
         ul.breadcrumbs
             li Главная
             li Мастера

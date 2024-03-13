@@ -1,0 +1,9 @@
+include layout/utils
+include ui/review-card/review-card
+
++section.reviews-page
+  h1.reviews-page__title Отзывы
+  .reviews-page__list
+    each _ in Array(10)
+      +review-card
+  +wrapBreak: button(type="button").btn.view-all Показать ещё

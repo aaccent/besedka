@@ -1,12 +1,9 @@
 extends layout/page
 
-append head
-    link(href=require('./styles.scss') rel="stylesheet")
-
 append main
     include sections/main-hero/main-hero
     include sections/events/events
-    include sections/services/services
+    include components/pageBlocks/services/services
     +services({ title: 'Услуги на Абсалямова' })
     +services({ title: 'Услуги на Муштари' })
     include sections/info/info
@@ -14,5 +11,5 @@ append main
     include sections/reviews/reviews
     include components/pageBlocks/seoBlock/template
 
-append scripts
-    script(src=require('./main.ts'))
+append before-footer
+    include components/pageBlocks/map-block/map-block

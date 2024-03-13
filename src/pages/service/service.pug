@@ -1,9 +1,7 @@
 extends layout/page
 include layout/utils
 
-append head
-
-append main     
+append main
     include global/components/pageBlocks/bannerBlock/template
     +banner(['Главная', 'Услуги на Абсалямова', 'Страница услуги'], 'Страница услуги', 'Проведение творческих встреч с людьми из разных сфер деятельности: мастер-классы, семинары, презентации продуктов и услуг с представителями самых разных современных профессий.')
         .btn.submit.shadow Оставить заявку

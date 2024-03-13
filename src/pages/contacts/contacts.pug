@@ -1,12 +1,8 @@
 extends layout/page
 include layout/utils
 
-append head
-    link(href=require('./styles.scss') rel="stylesheet")
-    link(href='https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet')
-
-append main       
-    .section.contacts
+append main
+    +section.contacts
         ul.breadcrumbs
             li Главная
             li Контакты
@@ -14,45 +10,45 @@ append main
         .contacts-block 
             .contact(data-lng="49.137864" data-lat="55.787923" data-address="mushtari")
                 .contact-top 
-                    +img('/assets/media/static/besedka-en-logo_color.png').logo-en
+                    +img(require('media/static/besedka-en-logo_color.png')).logo-en
                     .icon
-                        +img('/assets/media/static/location.svg')
+                        +img(require('media/static/location.svg'))
                 .contact-body 
                     .address г. Казань, ул. Муштари 2а
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
                         .tel 8 (976) 543 21 00
-                        +img('/assets/media/static/point_black.svg')
+                        +img(require('media/static/point_black.svg'))
                         .mail info_c@mail.ru
                     .socials 
                         .social
-                            +img('/assets/media/static/tg_black.svg')
+                            +img(require('media/static/tg_black.svg'))
                         .social
-                            +img('/assets/media/static/insta_black.svg')
+                            +img(require('media/static/insta_black.svg'))
                         .social 
-                            +img('/assets/media/static/vk_black.svg')
+                            +img(require('media/static/vk_black.svg'))
                 .contact-bottom 
                     .btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
             .contact(data-lng="49.109145" data-lat="55.819778" data-address="absalyamova")
                 .contact-top 
-                    +img('/assets/media/static/besedka-ru-logo_color.png').logo-ru
+                    +img(require('media/static/besedka-ru-logo_color.png')).logo-ru
                     .icon
-                        +img('/assets/media/static/location.svg')
+                        +img(require('media/static/location.svg'))
                 .contact-body 
                     .address г. Казань, ул. Абсалямова 19
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
                         .tel 8 (976) 543 21 00
-                        +img('/assets/media/static/point_black.svg')
+                        +img(require('media/static/point_black.svg'))
                         .mail info_c@mail.ru
                     .socials 
                         .social
-                            +img('/assets/media/static/tg_black.svg')
+                            +img(require('media/static/tg_black.svg'))
                         .social
-                            +img('/assets/media/static/insta_black.svg')
+                            +img(require('media/static/insta_black.svg'))
                         .social 
-                            +img('/assets/media/static/vk_black.svg')
+                            +img(require('media/static/vk_black.svg'))
                 .contact-bottom 
                     .btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
@@ -60,22 +56,19 @@ append main
             .map__view
             .contact-block 
                 .logo 
-                    +img('/assets/media/static/besedka-en-logo_color.png').logo-en
+                    +img(require('media/static/besedka-en-logo_color.png')).logo-en
                 .contact-body 
                     .address г. Казань, ул. Муштари 19
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
                         .tel 8 (976) 543 21 00
-                        +img('/assets/media/static/point_black.svg')
+                        +img(require('media/static/point_black.svg'))
                         .mail info_c@mail.ru
                     .socials 
                         .social
-                            +img('/assets/media/static/tg_black.svg')
+                            +img(require('media/static/tg_black.svg'))
                         .social
-                            +img('/assets/media/static/insta_black.svg')
+                            +img(require('media/static/insta_black.svg'))
                         .social 
-                            +img('/assets/media/static/vk_black.svg')
+                            +img(require('media/static/vk_black.svg'))
                 .btn Проложить маршрут
-
-append scripts
-    script(src=require('./main.ts'))

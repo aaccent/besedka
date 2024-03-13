@@ -1,4 +1,4 @@
-@use "styles/utils";
+@use "../../../../styles/utils";
 
 .services {
   background-color: var(--white);
@@ -23,6 +23,7 @@
 
   .card {
     height: 100%;
+    width: 100%;
     min-height: 342px;
   }
 

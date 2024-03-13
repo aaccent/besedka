@@ -1,0 +1,35 @@
+@use "styles/utils";
+
+.reviews-page {
+  &__title {
+    margin-bottom: 30px;
+    font: 6.6rem/1 var(--playfair);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .btn.view-all {
+    margin: 50px auto 0;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .reviews-page {
+    &__title {
+      font-size: 3.6rem;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn.view-all {
+      margin-top: 30px;
+    }
+  }
+}

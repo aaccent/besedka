@@ -41,14 +41,13 @@ include layout/utils
 .masters-gallery.master-swiper
     .swiper-wrapper
         each item in content
-            .master.swiper-slide
+            +anchor.master.swiper-slide
                 +img(item.img).master-img
                 .master-info 
                     .info-top
                         .btn.badge=item.badge
-                        +img('/assets/media/static/arrow.svg')
+                        +img(require('media/static/arrow.svg'))
                     .info-bottom 
                         .name=item.name
                         p=item.text
     .swiper-scrollbar
-        

@@ -1,8 +1,6 @@
 extends layout/page
 
-append head
-    link(href=require('./styles.scss') rel="stylesheet")
-
+append main
     -
         var content = [
             '/assets/media/content/directorBLock.png?as=webp',
@@ -16,13 +14,13 @@ append head
             '/assets/media/content/master_5.png?as=webp',
         ]
 
-append main       
-    .section
-        ul.breadcrumbs
-            li Главная
-            li Мастер-классы на Абсалямова
-            li Выездные мастер-классы
-            li Очень длинное название мастер-класса, которое не умещается полностью в две строки
+    ul.breadcrumbs.container
+        li Главная
+        li Мастер-классы на Абсалямова
+        li Выездные мастер-классы
+        li Очень длинное название мастер-класса, которое не умещается полностью в две строки
+
+    +section.mc-section
         .mc
             .mc-gallery
                 .swiper.mc-swiper-thumbs

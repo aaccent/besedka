@@ -80,6 +80,14 @@ html.disable-scroll {
   }
 }
 
+.breadcrumbs + .section {
+  padding-top: 0;
+}
+
+.main .breadcrumbs:first-child {
+  padding-top: 20px;
+}
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;

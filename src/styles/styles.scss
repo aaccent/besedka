@@ -5,6 +5,7 @@
 @use 'general/global';
 @use "node_modules/swiper/swiper";
 @use "node_modules/swiper/modules/scrollbar/scrollbar";
+@use "node_modules/mapbox-gl/dist/mapbox-gl.css";
 
 // Popup
 @use 'features/popup/index';
@@ -18,6 +19,7 @@
 @use 'ui/review-card/review-card';
 @use 'ui/input/input';
 @use 'ui/textarea/textarea';
+@use 'ui/dropdown/dropdown';
 
 // Page
 @use 'layout/general/header';
@@ -34,3 +36,15 @@
 @use 'components/pageBlocks/galleryBlock/galleryBlock';
 @use 'components/pageBlocks/clientsBlock/clientsBlock';
 @use 'components/pageBlocks/form-section/form-section';
+@use "components/pageBlocks/services/services";
+
+// Pages
+@use "pages/reviews/styles" as reviews-page;
+@use "pages/master/styles" as master-page;
+@use "pages/masters/styles" as masters-page;
+@use "pages/master-class/styles" as master-class-page;
+@use "pages/sample/styles" as sample-page;
+@use "pages/contacts/styles" as contacts-page;
+@use "pages/index/styles" as index-page;
+@use "pages/master-classes-list/styles" as master-classes-page;
+@use "pages/master-class-category/styles" as master-class-category-page;
