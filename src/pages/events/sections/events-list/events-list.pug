@@ -1,0 +1,19 @@
+include layout/utils
+include ui/card/card
+
+-
+  var text = 'Субботний Арт-завтрак: декорируем свечи и наслаждаемся хрустящими круассанами с разными начинками.'
+
++section.events-list
+  .events-list__tabs
+    +anchor.events-list__tab-item._active Все
+    +anchor.events-list__tab-item Акции
+    +anchor.events-list__tab-item События
+  .events-list__list
+    +card({ text, isDiscount: false })
+    +card({ text, isDiscount: true })
+    +card({ text, isDiscount: true })
+    +card({ text, isDiscount: true })
+    +card({ text, isDiscount: false })
+    +card({ text, isDiscount: true })
+  +wrapBreak: button(type="button").btn.view-all Показать ещё

@@ -1,0 +1,10 @@
+extends layout/page
+
+append main
+    ul.breadcrumbs.container
+        li Главная
+        li События
+    include sections/events-page/events-page
+    include components/pageBlocks/contentBlock/template
+    include sections/events-list/events-list
+    include components/pageBlocks/reasonsBlock/template
