@@ -8,6 +8,7 @@ import 'components/pageBlocks/services/services.js'
 
 // Ui
 import 'ui/swiper/swiper'
+import 'ui/dropdown/dropdown.js'
 import 'ui/review-card/review-card.js'
 
 // Pages

@@ -1,0 +1,12 @@
+mixin dropdown(props)
+  -
+    props = Object.assign({
+      title: 'Сначала недорогие',
+      list: ['Сначала недорогие', 'Сначала дорогие', 'По-умолчанию']
+    }, props)
+
+  .dropdown
+    +wrapBreak: button(type="button").dropdown__button= props.title
+    ul.dropdown__list
+      each item in props.list
+        li.dropdown__item: +wrapBreak: button(type="button").dropdown__item-title= item
