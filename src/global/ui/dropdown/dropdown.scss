@@ -3,9 +3,15 @@
 .dropdown {
   position: relative;
 
-  &:hover &__list {
-    opacity: 1;
-    visibility: visible;
+  &:hover {
+    .dropdown__list {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .dropdown__button::after {
+      opacity: 1;
+    }
   }
 
   &__button {
@@ -17,6 +23,8 @@
       content: '';
       background-image: url('media/static/arrow_down.svg');
       @include utils.square(18px);
+      @include utils.transition(opacity);
+      opacity: .5;
     }
   }
 
