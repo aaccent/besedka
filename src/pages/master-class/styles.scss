@@ -1,6 +1,14 @@
 @use 'swiper/scss';
 @use 'swiper/scss/thumbs';
 
+.mc-section +.section {
+    padding-top: 0;
+}
+
+.mc-section {
+    padding-bottom: 80px;
+}
+
 .mc {
     position: relative;
     height: 802px;
@@ -81,9 +89,10 @@
 
     .swiper-slide {
         opacity: 0.4;
+        width: 100px;
 
         img {
-            width: 93px;
+            width: 100%;
             height: 100px;
             object-fit: cover;
         }

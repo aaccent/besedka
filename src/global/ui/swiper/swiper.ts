@@ -52,12 +52,18 @@ new Swiper('.gallery-swiper', {
 
 const masterClassSwiper = new Swiper(".mc-swiper", {
   slidesPerView: 4.5,
+  spaceBetween: 20,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    1000: {
+      slidesPerView: 7,
+    }
+  }
 });
 
 new Swiper(".mc-swiper-thumbs", {
-  spaceBetween: 2,
+  spaceBetween: 20,
   thumbs: {
     swiper: masterClassSwiper,
   },
