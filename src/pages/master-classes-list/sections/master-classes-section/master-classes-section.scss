@@ -1,0 +1,46 @@
+@use "styles/utils";
+
+.master-classes-section {
+  padding-bottom: 45px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    min-height: initial;
+    height: 344px;
+
+    &__logo {
+      display: none;
+    }
+  }
+
+  .btn.view-all {
+    margin: 50px auto 0;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .master-classes-section + .section {
+    padding-top: 0;
+  }
+
+  .master-classes-section {
+    padding-bottom: 50px;
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      height: 232px;
+    }
+
+    .btn.view-all {
+      margin-top: 30px;
+    }
+  }
+}
