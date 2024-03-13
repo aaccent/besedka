@@ -1,0 +1,18 @@
+include layout/utils
+include features/popup/template
+
+include global/features/popup/template
+    +popup("call", "call-popup")
+        .popup-body 
+            .popup-form 
+                h2.popup-title.form-section__title Ответим на все ваши вопросы, оставьте заявку и мы свяжемся с вами
+                .popup-subtitle.form-section__subtitle Подтекст, если уловить хореический ритм или аллитерацию на "р", иллюстрирует культурный размер.
+                form.popup_form.form-section__form
+                    +wrapBreak: +input({ name: "name", placeholder: "Имя" })
+                    +wrapBreak: +input({ type: 'tel', name: "tel", placeholder: "Телефон" })
+                    +wrapBreak: +textarea({ name: "comment", placeholder: "Комментарий", required: false })
+                    +wrapBreak: button(type="submit").btn.submit Оставить заявку
+                    .form-section__privacy
+                        | Нажимая кнопку «Оставить заявку», вы даёте согласие на
+                        | обработку персональных данных и соглашаетесь с политикой конфиденциальности
+            .popup-image 
