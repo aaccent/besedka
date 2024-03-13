@@ -15,3 +15,4 @@ import 'ui/review-card/review-card.js'
 // Pages
 import 'pages/index/main'
 import 'pages/contacts/main'
+import 'pages/master/main.js'
