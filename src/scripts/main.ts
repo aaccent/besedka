@@ -1,5 +1,6 @@
 // Global
 import 'layout/general/header/header.js'
+import 'layout/general/footer/footer.js'
 import 'features/popup'
 
 // Components

@@ -1,5 +1,9 @@
 @use "styles/utils";
 
+.seo-block-section:has(+ .form-section) {
+    padding-bottom: 50px;
+}
+
 .seo-block {
     background-color: var(--white);
     border-radius: 40px;

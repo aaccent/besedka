@@ -49,6 +49,15 @@ function initMap() {
         zoom: 15,
         accessToken: 'pk.eyJ1Ijoic2V2YS1hYWNjZW50IiwiYSI6ImNsb2ZlNzR0NDByajUya3FwcmQ4bHdoZG8ifQ.2oZ5rpkSs2dKoP5a10lkcg',
         style: 'mapbox://styles/mapbox/light-v11',
+        dragRotate: false,
+        cooperativeGestures: true,
+        locale: {
+            "ScrollZoomBlocker.CtrlMessage": "ctrl + scroll для увеличения масштаба карты",
+            "ScrollZoomBlocker.CmdMessage" : "⌘ + scroll для увеличения масштаба карты",
+            'TouchPanBlocker.Message': 'Используйте два пальца чтобы подвинуть карту',
+            'NavigationControl.ZoomIn': 'Увеличить',
+            'NavigationControl.ZoomOut': 'Уменьшить',
+        },
     });
 
     const bounds = new LngLatBounds();

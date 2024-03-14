@@ -60,7 +60,7 @@ function getMqSwiperObj(mq: string, swiperObj: ISwiperObj): IMqSwiperObj {
 		destroySwiper() {
 			if (!this.status || typeof this.swiper === 'boolean') return
 
-			this.swiper.destroy()
+			this.swiper?.destroy?.()
 			this.status = false
 
 			if (swiperObj.callbackOnDestroy) swiperObj.callbackOnDestroy(this)

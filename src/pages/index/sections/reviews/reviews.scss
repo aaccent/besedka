@@ -1,11 +1,22 @@
 @use "styles/utils";
 
 .reviews {
+  border: solid var(--black_20);
+  border-width: 1px 0;
+
   &__list {
     @include utils.clear-list;
   }
 
   &__swiper {
     overflow: visible;
+  }
+}
+
+@media only screen and (max-width: utils.$tablet800) {
+  .reviews {
+    &__title {
+      margin-bottom: 19px;
+    }
   }
 }

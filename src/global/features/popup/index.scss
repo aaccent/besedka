@@ -72,19 +72,32 @@
     border-bottom-right-radius: 40px;
   }
 
-  .review-body-popup {
-    background-color: white;
+  .review-popup__inner {
     max-width: 1106px;
     width: 100%;
-    border-radius: 40px;
+  }
+
+  .review-body-popup {
     padding: 50px 50px 62px;
+    max-height: 646px;
+    border-radius: 40px;
+    background-color: white;
     font-size: 1.8rem;
+    overflow-y: auto;
 
     .review-title {
       font-size: 2.4rem;
       margin-bottom: 2rem;
       font-weight: 600;
     }
+  }
+
+  .review-text {
+    max-width: 635px;
+  }
+
+  &.review-popup .close-btn {
+    background-color: var(--black_60);
   }
 }
 
@@ -128,10 +141,26 @@
     background-position: top -50px center;
     background-repeat: no-repeat;
   }
+
+  .review-popup__inner {
+    padding: 10px;
+  }
+
+  .review-popup .close-btn {
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+
+    &::before,
+    &::after {
+      height: 15px;
+    }
+  }
 }
 
 @media only screen and (max-width: 450px) {
-  .popup {
+  .popup:not(.review-popup) {
     .close-btn {
       top: 10px;
       right: 10px;
