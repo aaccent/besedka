@@ -1,6 +1,7 @@
 @use "styles/utils";
 
 .main-hero {
+  margin-top: -73px;
   background-color: var(--white);
 
   .container {
@@ -60,6 +61,7 @@
 
 @media only screen and (max-width: utils.$tablet800) {
   .main-hero {
+    margin-top: 0;
     position: relative;
     color: var(--white);
 
