@@ -12,6 +12,7 @@ module.exports = {
       limitMediaWidth: false,
       initWidth: [
         { width: 1728 },
+        { width: 800, mediaQuery: 'only screen and (max-width: 1000px) and (orientation: landscape)' },
         { width: 390, mediaQuery: 'only screen and (max-width: 760px)' },
         { width: 800, mediaQuery: 'only screen and (max-width: 1000px)' },
         { width: 1100, mediaQuery: 'only screen and (max-width: 1100px)' },
