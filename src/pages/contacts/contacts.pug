@@ -2,11 +2,11 @@ extends layout/page
 include layout/utils
 
 append main
+    ul.breadcrumbs.container
+        li Главная
+        li Контакты
     +section.contacts
-        ul.breadcrumbs
-            li Главная
-            li Контакты
-        h1.contacts-title Контакты 
+        h1.contacts-title Контакты
         .contacts-block 
             .contact(data-lng="49.137864" data-lat="55.787923" data-address="mushtari")
                 .contact-top 
