@@ -8,11 +8,11 @@ include layout/utils
 +section({ container: false }).info
   .info__block: .container
     .info__block-img-wrapper
-      +img(require('media/content/info-block-img2.jpg?as=webp')).info__block-img
-      +img(require('media/content/info-block-img2_2.jpg?as=webp')).info__block-img
-      +img(require('media/content/info-block-img2_3.jpg?as=webp')).info__block-img
-    .info__block-content
-      h2.info__block-title
+      +img(require('media/content/info-block-img2.jpg?as=webp')).info__block-img.first
+      +img(require('media/content/info-block-img2_2.jpg?as=webp')).info__block-img.second
+      +img(require('media/content/info-block-img2_3.jpg?as=webp')).info__block-img.third
+    .info__block-conten
+      h2.info__block-titl
         | Мастер-классы в студии творчества «Беседка» проходят в интересном
         | формате, который гармонично сочетает в себе теорию и практику.
       .info__block-text
@@ -27,6 +27,6 @@ include layout/utils
         p= text1
         p= text2
     .info__block-img-wrapper
-      +img(require('media/content/info-block-img1.jpg?as=webp')).info__block-img
-      +img(require('media/content/info-block-img1_2.jpg?as=webp')).info__block-img
-      +img(require('media/content/info-block-img1_3.jpg?as=webp')).info__block-img
+      +img(require('media/content/info-block-img1.jpg?as=webp')).info__block-img.first
+      +img(require('media/content/info-block-img1_2.jpg?as=webp')).info__block-img.second
+      +img(require('media/content/info-block-img1_3.jpg?as=webp')).info__block-img.third

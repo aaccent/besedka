@@ -54,23 +54,27 @@
     object-fit: cover;
     object-position: center;
 
-    &:nth-child(1) {
+    &.first {
       z-index: 3;
       @include utils.square(635px);
     }
 
-    &:nth-child(2) {
+    &.second {
       z-index: 2;
       top: 44px;
       @include utils.square(566px);
       filter: blur(5px);
     }
 
-    &:nth-child(3) {
+    &.third {
       z-index: 1;
       top: 0;
       @include utils.square(506px);
       filter: blur(7px);
+    }
+
+    &.noHeight {
+      height: 0;
     }
   }
 
