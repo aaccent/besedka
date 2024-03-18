@@ -2,11 +2,11 @@ extends layout/page
 include layout/utils
 
 append main
+    ul.breadcrumbs.container
+        li Главная
+        li Контакты
     +section.contacts
-        ul.breadcrumbs
-            li Главная
-            li Контакты
-        h1.contacts-title Контакты 
+        h1.contacts-title Контакты
         .contacts-block 
             .contact(data-lng="49.137864" data-lat="55.787923" data-address="mushtari")
                 .contact-top 
@@ -17,18 +17,18 @@ append main
                     .address г. Казань, ул. Муштари 2а
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
-                        .tel 8 (976) 543 21 00
+                        +anchor("tel:8 (976) 543 21 00").tel 8 (976) 543 21 00
                         +img(require('media/static/point_black.svg'))
-                        .mail info_c@mail.ru
+                        +anchor("mailto:info_c@mail.ru").mail info_c@mail.ru
                     .socials 
-                        .social
+                        +anchor.social
                             +img(require('media/static/tg_black.svg'))
-                        .social
+                        +anchor.social
                             +img(require('media/static/insta_black.svg'))
-                        .social 
+                        +anchor.social
                             +img(require('media/static/vk_black.svg'))
-                .contact-bottom 
-                    .btn.show-map Показать на карте
+                .contact-bottom
+                    +wrapBreak: button(type="button").btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
             .contact(data-lng="49.109145" data-lat="55.819778" data-address="absalyamova")
                 .contact-top 
@@ -39,18 +39,18 @@ append main
                     .address г. Казань, ул. Абсалямова 19
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
-                        .tel 8 (976) 543 21 00
+                        +anchor("tel:8 (976) 543 21 00").tel 8 (976) 543 21 00
                         +img(require('media/static/point_black.svg'))
-                        .mail info_c@mail.ru
-                    .socials 
-                        .social
+                        +anchor("mailto:info_c@mail.ru").mail info_c@mail.ru
+                    .socials
+                        +anchor.social
                             +img(require('media/static/tg_black.svg'))
-                        .social
+                        +anchor.social
                             +img(require('media/static/insta_black.svg'))
-                        .social 
+                        +anchor.social
                             +img(require('media/static/vk_black.svg'))
-                .contact-bottom 
-                    .btn.show-map Показать на карте
+                .contact-bottom
+                    +wrapBreak: button(type="button").btn.show-map Показать на карте
                     a(href="#") Реквизиты компании
         .map  
             .map__view
@@ -61,14 +61,14 @@ append main
                     .address г. Казань, ул. Муштари 19
                     .work-hours Пн-Пт с 8 до 20:00
                     .tel-mail 
-                        .tel 8 (976) 543 21 00
+                        +anchor("tel:8 (976) 543 21 00").tel 8 (976) 543 21 00
                         +img(require('media/static/point_black.svg'))
-                        .mail info_c@mail.ru
-                    .socials 
-                        .social
+                        +anchor("mailto:info_c@mail.ru").mail info_c@mail.ru
+                    .socials
+                        +anchor.social
                             +img(require('media/static/tg_black.svg'))
-                        .social
+                        +anchor.social
                             +img(require('media/static/insta_black.svg'))
-                        .social 
+                        +anchor.social
                             +img(require('media/static/vk_black.svg'))
-                .btn Проложить маршрут
+                +wrapBreak: button(type="button").btn Проложить маршрут

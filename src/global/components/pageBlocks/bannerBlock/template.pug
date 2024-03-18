@@ -12,3 +12,7 @@ mixin banner(breadcrumbs, title, text)
                 .banner-text: p=text
                     if block
                         block
+            picture.banner-picture
+                source(srcset=require("media/content/banner-mobile_img.jpg?as=webp") media="(max-width: 1000px)")
+                source(srcset=require("media/content/image-16.webp"))
+                +img(require("media/content/image-16.webp"))
