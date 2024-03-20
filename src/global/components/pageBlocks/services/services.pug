@@ -6,6 +6,7 @@ include ui/card/card
     {
       text: 'Мастер-классы',
       img: require('media/content/services-img1.jpg?as=webp'),
+      class: 'vertical'
     },
     {
       text: 'Выездные мастер-классы',
@@ -30,6 +31,12 @@ include ui/card/card
     {
       text: 'Кулинария',
       img: require('media/content/services-img7.jpg?as=webp'),
+      class: 'horizontal'
+    },
+    {
+      text: 'Кулинария',
+      img: require('media/content/services-img7.jpg?as=webp'),
+      class: 'horizontal-full'
     },
   ]
 
@@ -44,6 +51,6 @@ mixin services(props)
     .swiper.services__swiper
       ul.services__list.swiper-wrapper
         each service in services
-          li.services__item.swiper-slide
+          li.services__item.swiper-slide(class=service.class)
             +card(service)
       .swiper-scrollbar
