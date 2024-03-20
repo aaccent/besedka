@@ -11,39 +11,6 @@
     width: 100%;
     height: 100%;
   }
-
-  .map__view {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    border-radius: 40px;
-  }
-
-  .marker-container {
-    border-radius: 50%;
-    border: 1px solid var(--black_20);
-    background-color: white;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .marker {
-    background-image: url('src/assets/media/static/marker.svg');
-    background-size: cover;
-    width: 25px;
-    height: 29px;
-    cursor: pointer;
-  }
-
-  .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
-    display: none;
-  }
- 
 }
 
 @media only screen and (max-width: utils.$tablet800) {

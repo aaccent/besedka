@@ -8,7 +8,6 @@ void function() {
     const lng = Number(contact.dataset.lng)
     const lat = Number(contact.dataset.lat)
     coords.push({ lng, lat })
-    console.log(coords)
   })
 
   function initMarkers(map) {
