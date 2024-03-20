@@ -3,6 +3,7 @@
 .info {
   padding-bottom: 0;
   background-color: var(--bg-color);
+  overflow: hidden;
 
   &__block {
     .container {
@@ -53,9 +54,12 @@
     border-radius: 40px;
     object-fit: cover;
     object-position: center;
+    transition: all 1s;
 
     &.first {
       z-index: 3;
+      top: 93px;
+      transition: top 1s;
       @include utils.square(635px);
     }
 
@@ -72,10 +76,10 @@
       @include utils.square(506px);
       filter: blur(7px);
     }
-
-    &.noHeight {
-      height: 0;
+    &.down {
+      top: 700px;
     }
+   
   }
 
   &__block-title {
@@ -88,7 +92,7 @@
     max-width: 690px;
     font-size: 1.8rem;
 
-    p + p {
+    p+p {
       margin-bottom: 30px;
     }
 
