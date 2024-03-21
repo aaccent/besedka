@@ -54,32 +54,27 @@
     border-radius: 40px;
     object-fit: cover;
     object-position: center;
-    transition: all 1s;
+    
 
-    &.first {
+    &:nth-child(1) {
       z-index: 3;
       top: 93px;
-      transition: top 1s;
       @include utils.square(635px);
     }
 
-    &.second {
+    &:nth-child(2) {
       z-index: 2;
       top: 44px;
       @include utils.square(566px);
       filter: blur(5px);
     }
 
-    &.third {
+    &:nth-child(3) {
       z-index: 1;
       top: 0;
       @include utils.square(506px);
       filter: blur(7px);
     }
-    &.down {
-      top: 700px;
-    }
-   
   }
 
   &__block-title {
@@ -135,6 +130,7 @@
     &__block-img {
       &:nth-child(1) {
         position: relative;
+        top: 0;
         width: 100%;
         height: 100%;
         border-radius: 40px 40px 0 0;

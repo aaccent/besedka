@@ -1,22 +1,50 @@
-import { gsap } from "gsap";
-import { Flip } from "gsap/Flip.js";
+import gsap from "gsap";
+import { adaptiveValue, isMobile } from 'features/adaptive'
 
-gsap.registerPlugin(Flip);
+void function () {
+    if (isMobile) return
 
-setInterval(() => {
-    const first = document.querySelectorAll('.first');
-    const second = document.querySelectorAll('.second');
-    const third = document.querySelectorAll('.third');
+    document.querySelectorAll('.info__block-img-wrapper').forEach(createAnimation)
+}()
 
-    first.forEach(el => {
-        el.classList.add('down');
-        setTimeout(() => {
-            el.classList.replace('first', 'third');
-            el.classList.remove('down');
-        }, 800)
-    });
+function createAnimation(element) {
+    const first = element.querySelector('.info__block-img:nth-child(1)');
+    const second = element.querySelector('.info__block-img:nth-child(2)');
+    const third = element.querySelector('.info__block-img:nth-child(3)');
+    
+    gsap.timeline()
+        .to(first, { top: '700px' }, '5')
+        .to(second, {
+            zIndex: 3,
+            top: 93,
+            width: adaptiveValue(635),
+            height: adaptiveValue(635),
+            filter: 'none',
+            onComplete() {
+                element.prepend(second);
+            }
 
-    second.forEach(el => el.classList.replace('second', 'first'));
+        }, '<0.3')
+        .to(third, {
+            zIndex: 2,
+            top: 44,
+            width: adaptiveValue(566),
+            height: adaptiveValue(566),
+            filter: 'blur(5px)',
+            onComplete() {
+                second.after(third)
+            }
+        }, '<0.3')
 
-    third.forEach(el => el.classList.replace('third', 'second'));
- }, 4000)
+        .to(first, {
+            zIndex: 1,
+            top: 0,
+            width: adaptiveValue(506),
+            height: adaptiveValue(506),
+            filter: 'blur(7px)',
+            onComplete() {
+                createAnimation(element)
+            }
+        }, '<0.3')
+}
+
