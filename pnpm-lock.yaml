@@ -8,6 +8,9 @@ dependencies:
   '@types/mapbox-gl':
     specifier: ^3.1.0
     version: 3.1.0
+  gsap:
+    specifier: ^3.12.5
+    version: 3.12.5
   mapbox-gl:
     specifier: ^3.2.0
     version: 3.2.0
@@ -1634,6 +1637,10 @@ packages:
 
   /grid-index@1.1.0:
     resolution: {integrity: sha512-HZRwumpOGUrHyxO5bqKZL0B0GlUpwtCAzZ42sgxUPniu33R1LSFH5yrIcBCHjkctCAh3mtWKcKd9J4vDDdeVHA==}
+    dev: false
+
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
     dev: false
 
   /handle-thing@2.0.1:
