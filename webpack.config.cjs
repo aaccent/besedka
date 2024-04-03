@@ -12,7 +12,7 @@ const keepPugFolderStructure = (pathData) => {
   const sourceFile = pathData.filename
   const relativeFile = path.relative(sourcePath, sourceFile)
   const { dir, name } = path.parse(relativeFile)
-  return `${dir.replace('assets\\', '')}/${name}[ext]`
+  return `${dir.replace('assets\\', '').replace('media', 'img')}/${name}[ext]`
 }
 
 const pagesRegex = /[\\/]pages[\\/]([\w_-]+)[\\/]/
