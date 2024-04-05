@@ -41,7 +41,7 @@
 
   .close-btn {
     z-index: 30;
-    top: 0px;
+    top: 0;
     right: -60px;
     background-color: #FFFFFF40;
     border-radius: 50%;
@@ -90,10 +90,6 @@
       margin-bottom: 2rem;
       font-weight: 600;
     }
-  }
-
-  .review-text {
-    max-width: 635px;
   }
 
   &.review-popup .close-btn {
