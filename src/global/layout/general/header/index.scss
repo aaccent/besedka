@@ -242,10 +242,26 @@
     .container {
       gap: 20px;
     }
+  }
+}
 
-    &__call-button {
-      font-size: 0;
-      gap: 0;
+@media only screen and (max-width: utils.$desktop1460) {
+  .header {
+    &__logo {
+      &._ru-version {
+        /*! @skip-scaling */
+        width: 80px;
+      }
+
+      &._en-version {
+        /*! @skip-scaling */
+        width: 125px;
+      }
+    }
+
+    &__logo-block-tel {
+      /*! @skip-scaling */
+      font-size: 15px;
     }
   }
 }
@@ -267,6 +283,11 @@
       &__logo-block {
         gap: 15px;
       }
+    }
+
+    &__call-button {
+      font-size: 0;
+      gap: 0;
     }
   }
 }
