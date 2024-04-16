@@ -555,13 +555,15 @@
 
       &._ru-version {
         width: 71px;
+        filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(1362%) hue-rotate(338deg) brightness(93%) contrast(86%);
       }
     }
 
     // Top menu logos
     &__logo-list {
       justify-content: initial;
-      gap: 30px;
+      gap: 74px;
+      align-items: end;
 
       .header__logo-block {
         &::after {
