@@ -25,6 +25,7 @@
 
     &._ru-version {
       width: 115px;
+      filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(1362%) hue-rotate(338deg) brightness(93%) contrast(86%);
     }
   }
 
@@ -555,7 +556,6 @@
 
       &._ru-version {
         width: 71px;
-        filter: brightness(0) saturate(100%) invert(22%) sepia(42%) saturate(1362%) hue-rotate(338deg) brightness(93%) contrast(86%);
       }
     }
 
